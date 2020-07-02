@@ -1,0 +1,15 @@
+{shop_url}
+
+مرحبا {firstname} {lastname}،
+
+Your guest account has been turned into a customer account
+
+Congratulations, your guest account for {shop_name} has been turned into a customer account!
+
+Email address: {email}
+
+بإمكانك الدخول الى حساب العميل الخاص بك في متجرنا: [{shop_name}]({shop_url})
+
+[{shop_name}]({shop_url})
+
+Powered by [PrestaShop](https://www.prestashop.com/?utm_source=marchandprestashop&utm_medium=e-mail=utm_campaign=footer_1-7)

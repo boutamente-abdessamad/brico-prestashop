@@ -1,0 +1,168 @@
+/**
+* 2007-2014 PrestaShop
+*
+* NOTICE OF LICENSE
+*
+* This source file is subject to the Academic Free License (AFL 3.0)
+* that is bundled with this package in the file LICENSE.txt.
+* It is also avaiposle through the world-wide-web at this URL:
+* http://opensource.org/licenses/afl-3.0.php
+* If you did not receive a copy of the license and are unable to
+* obtain it through the world-wide-web, please send an email
+* to license@prestashop.com so we can send you a copy immediately.
+*
+* DISCLAIMER
+*
+* Do not edit or add to this file if you wish to upgrade PrestaShop to newer
+* versions in the future. If you wish to customize PrestaShop for your
+* needs please refer to http://www.prestashop.com for more information.
+*
+*  @author    PrestaShop SA <contact@prestashop.com>
+*  @copyright 2007-2014 PrestaShop SA
+*  @license   http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+*  International Registered Trademark & Property of PrestaShop SA
+*
+* Don't forget to prefix your containers with your own identifier
+* to avoid any conflicts with others containers.
+*/
+.pos-radio{float:left;margin-left:10px}
+.pos-menu-row{border:solid 1px #aeaeae}
+.pos-menu-row a.btn{float: right; margin-left:5px}
+.pos-menu-row a.btn.button-new-item{margin-left:0;}
+.pos-menu-column-content h4 span.label-tooltip, .pos-menu-column-content .group-action > a{float: left;}
+.pos-menu-column {clear:both;display: inline-block; margin-top: 10px;width: 100%;}
+
+.pos-column .block-items{clear:both;padding-left: 0px;}
+.pos-column .block-items li{list-style:none;border:solid 1px #9ed0ec;position:relative; padding:3px;display:inline-block;width:100%;
+margin-top:10px; background: #fff;border-left: 3px solid #9ed0ec; padding-left: 15px;}
+.pos-column .block-items li > span { line-height:25px;}
+.pos-column .block-items li .group-action{display:inline; float:right}
+.pos-menu-column .process-icon-new {font-size:14px;height:auto;width:auto;min-height:17px;}
+.pos-menu-row{margin-bottom:15px;}
+.pos-menu-column .text-html{white-space:normal;}
+.pos-menu-column .text-html img {max-width:100%;}
+.pos-column .block-items li.item-header{
+	font-weight:bold;
+	padding-left: 5px;
+}
+.pos-column .block-items li.item-header > span { font-size: 13px;}
+.hide-ps-link{display:none !important}
+#menuContent .panel-footer{
+	margin: 15px -15px;
+}
+
+
+#posvegamenu-submenu {}
+#posvegamenu-submenu #menuRowContent .pos-menu-row {
+	border: 1px solid #ccc;
+	background: #f1f1f1;
+    padding: 0;
+    position: relative;
+}
+#posvegamenu-submenu #menuRowContent .panel-position {
+	width: 35px;
+	float:left;
+}
+#posvegamenu-submenu #menuRowContent .panel-position i {
+	font-size: 16px;
+    padding-left: 9px;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+#posvegamenu-submenu #menuRowContent .panel-content {
+	margin-left: 36px;
+	border-left: 1px solid #ccc;
+	padding: 0 10px;
+	background-color: #fff;
+}
+#posvegamenu-submenu #menuRowContent .panel-content h4 {
+	height: 40px;
+	line-height: 30px;
+	font-size: 16px;
+	border-bottom: 1px dotted #666;
+	margin: 0;
+	padding-top: 5px;
+}
+#posvegamenu-submenu #menuRowContent .panel-content .pos-column{
+	padding: 5px;
+}
+#posvegamenu-submenu #menuRowContent .panel-content .column-container {
+	border: solid 1px #ccc;
+	padding: 0 5px;
+	background: #fff;
+}
+#desc-product-new {
+	text-align: center;
+	display: block;
+}
+#desc-product-new:hover {
+	text-decoration: none;
+}
+#desc-product-new span{
+	font-size: 15px;
+    line-height: 26px;
+    vertical-align: top;
+}
+#posvegamenu-list .panel-heading-action {
+	right: 20px !important;
+}
+#desc-product-new i.process-icon-new  {
+	display: inline-block;
+}
+
+#posvegamenu-submenu .btn-success {
+    color: #fff;
+    background-color: #7fd286;
+    border-color: #60ba68;
+}
+#posvegamenu-submenu .btn-success:hover {
+    background-color: #60ba68;
+}
+
+.ar-blocked{
+    position: relative;
+}
+.ar-loading{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,0.5);
+}
+.ar-loading .ar-loading-inner{
+    position: absolute;
+    width: 140px;
+    height: 49px;
+    padding: 15px 15px 15px 40px;
+    border-radius: 2px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+    border: 1px solid #AAAAAA;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: url('../img/ring-alt.gif') no-repeat 6px 8px scroll  #FFFFFF;
+}
+.xbutton{
+	position: absolute;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    padding: 9px;
+    top: 0;
+    background: #d25050;
+    color: #fff;
+}
+.xbutton:hover {
+	cursor: pointer;
+	background: #e24141;
+}
+#posvegamenu-submenu .modal-dialog {
+	margin: 150px auto;
+}

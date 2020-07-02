@@ -1,0 +1,41 @@
+{shop_url}
+
+مرحبا {firstname} {lastname}،
+
+Thank you for shopping on {shop_name}!
+
+تفاصيل الطلب
+
+الطلب: {order_name} وضع في {date}
+
+أسلوب الدفع: {payment}
+
+المرجع	منتج	سعر الوحدة	الكمية	السعر الإجمالي  {products_txt} {discounts_txt}
+المنتجات	{total_products}
+خصومات	{total_discounts}
+تغليف الهدايا	{total_wrapping}
+الشحن	{total_shipping}
+Including total tax	{total_tax_paid}
+إجمالي المدفوعات	{total_paid}
+
+الشحن
+
+جهة الشحن: {carrier}
+
+أسلوب الدفع: {payment}
+
+عنوان التوصيل
+
+{delivery_block_txt}
+
+عنوان الفواتير
+
+{invoice_block_txt}
+
+Follow your order and download your invoice on our shop, go to the [Order history and details]({history_url}) section of your customer account.
+
+If you have a guest account, you can follow your order via the [Guest Tracking]({guest_tracking_url}) section on our shop.
+
+[{shop_name}]({shop_url})
+
+Powered by [PrestaShop](https://www.prestashop.com/?utm_source=marchandprestashop&utm_medium=e-mail=utm_campaign=footer_1-7)

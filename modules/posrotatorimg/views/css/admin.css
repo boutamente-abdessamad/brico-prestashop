@@ -1,0 +1,466 @@
+a.button-click{
+	background: #25A6E1;
+	background: -moz-linear-gradient(top,#25A6E1 0%,#188BC0 100%);
+	background: -webkit-gradient(linear,left top,left bottom,color-stop(0%,#25A6E1),color-stop(100%,#188BC0));
+	background: -webkit-linear-gradient(top,#25A6E1 0%,#188BC0 100%);
+	background: -o-linear-gradient(top,#25A6E1 0%,#188BC0 100%);
+	background: -ms-linear-gradient(top,#25A6E1 0%,#188BC0 100%);
+	background: linear-gradient(top,#25A6E1 0%,#188BC0 100%);
+	filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#25A6E1',endColorstr='#188BC0',GradientType=0);
+	padding:6px 13px;
+	color:#fff;
+	font-family:'Helvetica Neue',sans-serif;
+	font-size:13px;
+	border-radius:4px;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	border:1px solid #1A87B9;
+	color: #ddd;
+}
+a.button-click:hover {
+	color:#fff;
+	text-decoration: none;
+}
+a.button-click:focus{
+	color:#ddd;
+	text-decoration: none;
+}
+#image-box {position:relative; overflow:hidden; width: 400px; margin-top: 20px;}
+.second-image {position: absolute; opacity: 0;}
+/* animation1 */
+.an1 .second-image {
+    left: 0;
+    max-width: 100%;
+    opacity:0;
+    position: absolute;
+    top: 0;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+}
+#image-box.an1:hover .second-image  {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* end animation1 */
+
+/* animation2 */
+#image-box.an2 .second-image {
+    position: absolute;
+    padding: 0;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    left: 100%;
+    visibility: hidden;
+    opacity: 0; 
+    filter: alpha(opacity=0);
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+}
+#image-box.an2:hover .second-image  {
+    opacity: 1;
+    left: 0;
+    visibility: visible;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+}
+/* end animation2 */
+
+/* animation3 */
+#image-box.an3 .second-image {
+    position: absolute;
+    padding: 0;
+    text-align: center;
+    top: 0;
+    width: 100%;
+    right: 100%;
+    visibility: hidden;
+    opacity: 0; 
+    filter: alpha(opacity=0);
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+}
+#image-box.an3:hover .second-image  {
+     opacity: 1;
+    right: 0;
+    visibility: visible;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+}
+/* end animation3 */
+
+/* animation4*/
+#image-box.an4 .second-image {
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	visibility: hidden;
+    opacity: 0;
+	display:inline-block;
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+   
+}
+#image-box.an4:hover .second-image  {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+	opacity: 1;
+	 visibility: visible;
+     transition: 0.5s;
+    -webkit-transition: 0.5s;
+}
+#image-box.an4 .first-image {
+	 visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+}
+#image-box.an4:hover .first-image {
+	opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+}
+/* end animation4 */
+/* animation5*/
+#image-box.an5 .second-image {
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	visibility: hidden;
+    opacity: 0;
+	display:inline-block;
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+    transform: translateY(100%);
+   
+}
+#image-box.an5:hover .second-image  {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0);
+	opacity: 1;
+	 visibility: visible;
+}
+#image-box.an5 .first-image {
+	 visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+}
+#image-box.an5:hover .first-image {
+	opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+}
+/* end animation5 */
+
+/* animation6 */
+#image-box.an6 .second-image {
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	visibility: hidden;
+    opacity: 0;
+	display:inline-block;
+	-webkit-transform: rotateY(90deg);
+    -moz-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    -o-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+    -webkit-transform-origin: 0% 50%;
+    -moz-transform-origin: 0% 50%;
+    -ms-transform-origin: 0% 50%;
+    -o-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+   
+}
+#image-box.an6:hover .second-image  {
+      -webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    -ms-transform: rotateY(0);
+    -o-transform: rotateY(0);
+    transform: rotateY(0);
+	opacity: 1;
+	 visibility: visible;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+}
+#image-box.an6 .first-image {
+	 visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+}
+#image-box.an6:hover .first-image  {
+	opacity: 0;
+    visibility: hidden;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+}
+/* end animation6 */
+
+/* animation7 */
+#image-box.an7 .second-image {
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	visibility: hidden;
+    opacity: 0;
+	display:inline-block;
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+	-webkit-transform: rotateY(-90deg);
+    -moz-transform: rotateY(-90deg);
+    -ms-transform: rotateY(-90deg);
+    -o-transform: rotateY(-90deg);
+    transform: rotateY(-90deg);
+    -webkit-transform-origin: 0% 50%;
+    -moz-transform-origin: 0% 50%;
+    -ms-transform-origin: 0% 50%;
+    -o-transform-origin: 0% 50%;
+    transform-origin: 0% 50%;
+   
+}
+#image-box.an7:hover .second-image  {
+      -webkit-transform: rotateY(0);
+    -moz-transform: rotateY(0);
+    -ms-transform: rotateY(0);
+    -o-transform: rotateY(0);
+    transform: rotateY(0);
+	opacity: 1;
+	 visibility: visible;
+	-webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+}
+#image-box.an7 .first-image {
+	 visibility: visible;
+    opacity: 1;
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+}
+#image-box.an7:hover .first-image  {
+	opacity: 0;
+    visibility: hidden;
+	  -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+}
+/* end animation7 */
+
+/* animation8 */
+#image-box.an8 .second-image {
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	visibility: hidden;
+    opacity: 0;
+	display:inline-block;
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+	-webkit-transform: translateZ(-1000px) rotateY(-90deg);
+    -moz-transform: translateZ(-1000px) rotateY(-90deg);
+    -ms-transform: translateZ(-1000px) rotateY(-90deg);
+    -o-transform: translateZ(-1000px) rotateY(-90deg);
+    transform: translateZ(-1000px) rotateY(-90deg);
+   
+}
+#image-box.an8:hover .second-image  {
+    -webkit-transform: translateZ(0) rotateY(0);
+    -moz-transform: translateZ(0) rotateY(0);
+    -ms-transform: translateZ(0) rotateY(0);
+    -o-transform: translateZ(0) rotateY(0);
+    transform: translateZ(0) rotateY(0);
+	opacity: 1;
+	 visibility: visible;
+	    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+}
+#image-box.an8 .first-image {
+	 visibility: visible;
+    opacity: 1;
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+}
+#image-box.an8:hover .first-image  {
+	opacity: 0;
+    visibility: hidden;
+	  -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+}
+/* end animation8 */
+/* animation9*/
+#image-box.an9 .second-image {
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	visibility: hidden;
+    opacity: 0;
+	display:inline-block;
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;   
+}
+#image-box.an9:hover .second-image  {    
+	opacity: 1;
+	 visibility: visible;
+	 -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+}
+#image-box.an9 .first-image {
+	 visibility: visible;
+    opacity: 1;
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+#image-box.an9:hover .first-image  {
+	opacity: 0;
+    visibility: hidden;
+	  -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+/* animation10*/
+#image-box.an10 .second-image {
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	visibility: hidden;
+    opacity: 0;
+	display:inline-block;
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+    -webkit-transform: translateX(100%) rotate(180deg);
+    -moz-transform: translateX(100%) rotate(180deg);
+    -ms-transform: translateX(100%) rotate(180deg);
+    -o-transform: translateX(100%) rotate(180deg);
+    transform: translateX(100%) rotate(180deg);
+   
+}
+#image-box.an10:hover .second-image  {
+    -webkit-transform: translateX(0) rotate(0);
+    -moz-transform: translateX(0) rotate(0);
+    -ms-transform: translateX(0) rotate(0);
+    -o-transform: translateX(0) rotate(0);
+    transform: translateX(0) rotate(0);
+	opacity: 1;
+	 visibility: visible;
+	 -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+}
+#image-box.an10 .first-image {
+	 visibility: visible;
+    opacity: 1;
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+}
+#image-box.an10:hover .first-image  {
+	opacity: 0;
+    visibility: hidden;
+	  -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+}
+/* end animation10 */
+
+/* animation11*/
+#image-box.an11 .second-image {
+	position:absolute;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	visibility: hidden;
+    opacity: 0;
+	display:inline-block;
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+    -webkit-transform: translateX(-100%) rotate(-180deg);
+    -moz-transform: translateX(-100%) rotate(-180deg);
+    -ms-transform: translateX(-100%) rotate(-180deg);
+    -o-transform: translateX(-100%) rotate(-180deg);
+    transform: translateX(-100%) rotate(-180deg);
+   
+}
+#image-box.an11:hover .second-image  {
+    -webkit-transform: translateX(0) rotate(0);
+    -moz-transform: translateX(0) rotate(0);
+    -ms-transform: translateX(0) rotate(0);
+    -o-transform: translateX(0) rotate(0);
+    transform: translateX(0) rotate(0);
+	opacity: 1;
+	 visibility: visible;
+	 -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+}
+#image-box.an11 .first-image {
+	 visibility: visible;
+    opacity: 1;
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+}
+#image-box.an11:hover .first-image  {
+	opacity: 0;
+    visibility: hidden;
+	  -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    transition: all 0.4s ease-out;
+}
+/* end animation10 */
+

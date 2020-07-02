@@ -1,0 +1,14 @@
+{shop_url}
+
+مرحبا {firstname} {lastname}،
+
+Sponsorship Program
+
+لقد انشئنا قسيمه شرائيه خاصه لك لدعوتك صديق.
+فيما يلي الرمز الخاص بالفاتورة: {voucher_num}، بمبلغ وقدره {voucher_num}
+
+ببساطة انسخ والصق هذا الرمز اثناء عملية الدفع لطلبك التالي.
+
+[{shop_name}]({shop_url})
+
+Powered by [PrestaShop](https://www.prestashop.com/?utm_source=marchandprestashop&utm_medium=e-mail=utm_campaign=footer_1-7)

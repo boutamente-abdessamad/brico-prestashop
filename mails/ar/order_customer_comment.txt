@@ -1,0 +1,17 @@
+{shop_url}
+
+مرحبا {firstname} {lastname}،
+
+Message from customer
+
+كنت قد تلقيت رسالة جديدة بخصوص الطلب رقم {order_name}.
+
+العميل: {firstname} {lastname} ({email})
+
+رسالة العميل:
+
+{message}
+
+[{shop_name}]({shop_url})
+
+Powered by [PrestaShop](https://www.prestashop.com/?utm_source=marchandprestashop&utm_medium=e-mail=utm_campaign=footer_1-7)

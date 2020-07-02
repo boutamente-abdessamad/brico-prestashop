@@ -1,0 +1,320 @@
+/* ----------------------- This css is custom css add in mainDir/classes/controller/FrontController.php setMedia function 
+
+is not original style --------------*/
+
+#header,
+.scroll-menu,
+.social_follow li a:hover,
+.js-product-miniature.style_product1 .add-to-links li a:hover,
+.js-product-miniature.style_product2 .add-to-links li.cart button.ajax_add_to_cart_button:hover,
+.js-product-miniature.style_product2 .add-to-links li.cart span.ajax_add_to_cart_button:hover,
+.js-product-miniature.style_product2 .add-to-links li a:hover,
+.js-product-miniature.style_product3 .add-to-links li.cart button.ajax_add_to_cart_button:hover,
+.js-product-miniature.style_product3 .add-to-links li.cart span.ajax_add_to_cart_button:hover,
+.js-product-miniature.style_product3 .add-to-links li a:hover,
+.blockcart .popup_cart ul li .img_content .product-quantity,
+.blockcart .button_cart a.desktop .item_count,
+.blockcart .button_cart a.mobile .item_count,
+.blockcart .popup_cart .checkout a,
+#_desktop_megamenu .pos-menu-horizontal .menu-content .menu-item.active>a,
+#_desktop_megamenu .pos-menu-horizontal .menu-content .menu-item.home>a,
+#_desktop_megamenu .pos-menu-horizontal .menu-content .menu-item:hover>a,
+#_desktop_megamenu .pos-menu-horizontal .menu-content .menu-item.active>a:before,
+#_desktop_megamenu .pos-menu-horizontal .menu-content .menu-item.home>a:before,
+#_desktop_megamenu .pos-menu-horizontal .menu-content .menu-item:hover>a:before,
+#pos_search_top .form_search .search_submit,
+.search_top form button,
+#_desktop_wishtlist .wishtlist_top a .cart-wishlist-number,
+.is-countdown,
+.desc_slideshow .readmore,
+.slideshow_container .pos-slideshow .nivo-controlNav a:hover,
+.slideshow_container .pos-slideshow .nivo-controlNav a.active,
+.owl-nav>div:hover,
+.product-flag .new,
+.product-flag .on-sale,
+.product-flag .pack,
+.product-flag .new:after,
+.product-flag .on-sale:after,
+.product-flag .pack:after,
+.owl-dots .owl-dot.active span,
+.owl-dots .owl-dot:hover span,
+.pos-featured-products .col-center .js-product-miniature .product_desc .cart button.ajax_add_to_cart_button:hover,
+.pos-featured-products .col-center .js-product-miniature .product_desc .cart span.ajax_add_to_cart_button:hover,
+#search_filters .ui-widget-header,
+#tags_block .tags_block li a:hover,
+.tabs .nav-tabs .nav-item .nav-link:hover:after,
+.tabs .nav-tabs .nav-item .nav-link.active:after,
+#js-product-list .product_content.list .js-product-miniature .product_desc div.cart button.ajax_add_to_cart_button:hover,
+#js-product-list .product_content.list .js-product-miniature .product_desc div.cart span.ajax_add_to_cart_button:hover,
+#js-product-list .product_content.list .js-product-miniature .product_desc .add-to-links li a:hover,
+.ft_newsletter form .btn:hover,
+.back-top a,
+.products-sort-order .select-list:hover,
+.pagination a:hover,
+.pagination .current a,
+.product-actions .add-to-cart,
+.poscompare-product .desc-box div.cart button.ajax_add_to_cart_button:hover,
+.poscompare-product .desc-box div.cart span.ajax_add_to_cart_button:hover,
+.btn-comment:hover,
+.btn-secondary:hover,
+.btn-tertiary:hover,
+.btn-primary:hover,
+.btn-secondary:focus,
+.btn-tertiary:focus,
+.btn-primary:focus,
+.btn-secondary:active,
+.btn-tertiary:active,
+.btn-primary:active,
+.btn-secondary:active:focus,
+.btn-tertiary:active:focus,
+.btn-primary:active:focus {
+    background: #FFFFFF;
+}
+
+#header .header-nav {
+    background: #005eb8;
+}
+
+#_desktop_wishtlist .wishtlist_top a i {
+    color: #005eb8;
+}
+
+.blockcart .button_cart a.desktop i,
+.blockcart .button_cart a.mobile i {
+    color: #005eb8;
+}
+
+.blockcart .button_cart a.desktop .item_count,
+.blockcart .button_cart a.mobile .item_count {
+    color: #ffffff;
+    background: #fe3737;
+}
+
+#_desktop_wishtlist .wishtlist_top a .cart-wishlist-number {
+    color: #ffffff;
+    background: #fe3737;
+}
+
+#_desktop_megamenu .pos-menu-horizontal .menu-content .menu-item.active>a,
+#_desktop_megamenu .pos-menu-horizontal .menu-content .menu-item.home>a,
+#_desktop_megamenu .pos-menu-horizontal .menu-content .menu-item:hover>a {
+    color: #005eb8 !important;
+}
+
+#_desktop_megamenu .pos-menu-horizontal .menu-content .menu-item>a {
+    padding: 0 50px;
+    margin-left: 0;
+    color: #ffffff;
+    height: 50px;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    color: #005eb8 !important;
+    border: 1px solid #005eb866;
+    border-radius: 0;
+}
+
+#_desktop_megamenu .pos-menu-horizontal .menu-content .menu-item>a:not(:last-child) {
+    border-left: none;
+}
+
+#_desktop_vegamenu .pos-menu-vertical .title_vertical {
+    background-color: #046bcd;
+    border: 1px solid #046bcd;
+    height: 50px;
+    border-radius: 0;
+    align-items: center;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+    padding: 0 15px;
+}
+
+#_desktop_search_category {
+    max-width: 700px;
+}
+
+#_desktop_static .shipping p,
+#_mobile_static .shipping p {
+    color: #046bcd;
+}
+
+#pos_search_top .form_search {
+    border: 1px solid #005eb866;
+    height: 54px;
+}
+
+#pos_search_top .form_search .search_submit i {
+    color: #046bcd;
+}
+
+.blockcart {
+    display: flex;
+    align-items: center;
+    height: 54px;
+}
+
+#_desktop_wishtlist .wishtlist_top {
+    display: flex;
+    align-items: center;
+    height: 54px;
+}
+
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+.no-gutters>.col,
+.no-gutters>[class*=col-] {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.slideshow_container {
+    width: calc(100% - 315px);
+    margin-left: auto;
+}
+
+.slideshow_container .pos-slideshow {
+    height: 450px;
+}
+
+.nivoSlider img {
+    height: 450px;
+}
+
+.banner7-des h2:nth-child(1) {
+    color: #d32e3f;
+}
+
+.banner7-des h2:nth-child(2) {
+    color: #046bcd;
+}
+
+a.readmore.transition_slide_3 {
+    width: 180px;
+    height: 50px;
+    border-radius: 0;
+    background-color: #046bcd;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#_desktop_vegamenu .menu-content {
+    display: block !important;
+}
+
+#_desktop_vegamenu .pos-menu-vertical .menu-content {
+    display: none;
+    width: 100%;
+    background-color: #046bcd;
+    border: none;
+    border-radius: 0px;
+    padding: 5px 0;
+}
+
+#_desktop_vegamenu .pos-menu-vertical .menu-content .menu-item>a {
+    background: transparent;
+    color: #FFFFFF;
+}
+
+.pos_title h2,
+.pos_title_column h2 {
+    color: #046bcd;
+}
+
+.item-product {
+    box-shadow: 0 0 2px 1px #00000075;
+    border: 1px solid #4844448f;
+    padding: 15px;
+    min-height: 400px;
+    margin: 5px 0px;
+}
+
+.product-flag li {
+    display: none !important;
+}
+
+.js-product-miniature .product_desc .product_name {
+    color: #046bcd;
+}
+
+.product-price-and-shipping .price {
+    color: #d32e3f;
+}
+
+a.cui-add-to-cart {
+    height: 30px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    background-color: #d32e3f;
+    justify-content: center;
+    color: #FFFFFF;
+    margin-top: 15px;
+    position: absolute;
+    bottom: 0px;
+}
+
+article.product-miniature .item-product {
+    box-shadow: 0 0 4px 1px #00000075;
+    border: none;
+    padding: 0;
+    margin: 5px 0px;
+}
+
+article.product-miniature {
+    min-height: 350px;
+}
+
+.pos-special-products .item-product {
+    box-shadow: 0 0 4px 1px #00000075;
+    border: none;
+    padding: 0;
+    margin: 5px 0px;
+}
+
+.pos-special-products .js-product-miniature {
+    height: 400px;
+}
+
+.pos-special-products .js-product-miniature .product_desc .product_name {
+    font-size: 35px;
+    line-height: 40px;
+}
+
+.pos-special-products .js-product-miniature .product_desc .product-price-and-shipping .price {
+    font-size: 27px;
+    font-weight: 600;
+    color: #d32e3f;
+}
+
+.tab-category-container-slider {
+    display: none !important;
+}
+
+.pos_logo.product_block_container {
+    display: none;
+}
+
+#pos_search_top .form_search.show-categories .form-group:after {
+    display: none;
+}
+
+#pos_search_top .form_search .form-group .bootstrap-select {
+    display: none;
+}
+
+
+/* media  */
+
+@media (min-width: 1200px) {
+    #_desktop_search_category {
+        max-width: 700px;
+    }
+}

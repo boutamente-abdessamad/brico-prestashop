@@ -1,0 +1,27 @@
+{shop_url}
+
+مرحبا {firstname} {lastname}،
+
+نشكر لك انشاء حساب عملاء لدى {shop name}.
+
+Your login details on {shop_name}
+
+فيما يلي معلومات الدخول الى حسابك:
+
+Email address: {email}
+
+نصائح أمنية مهمة:
+
+1. حافظ دائما على سرية المعلومات الخاصة بحسابك.
+
+2. لا تقم أبدا باطلاع أحد على بيانات الدخول الى حسابك.
+
+3. قم بتغيير كلمة المرور بشكل دوري.
+
+4. قم بابلاغنا فورا في حال كنت تعتقد ان شخصا اخر يستخدم حسابك دون علمك.
+
+باستطاعتك الان البدء بالشراء من متجرنا: [{shop_name}]({shop_url})
+
+[{shop_name}]({shop_url})
+
+Powered by [PrestaShop](https://www.prestashop.com/?utm_source=marchandprestashop&utm_medium=e-mail=utm_campaign=footer_1-7)

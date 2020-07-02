@@ -1,0 +1,218 @@
+#poscompare-table {
+  position: relative; }
+  #poscompare-table > .poscompare-table-container {
+    overflow-x: auto;
+    overflow-y: hidden; }
+  #poscompare-table > .poscompare-table-actions {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(160, 160, 160, 0.25); }
+	#poscompare-table > .poscompare-table-actions a {
+		font-size:16px;
+		font-weight:600;
+    }
+  #poscompare-table .poscompare-product-td {
+    -ms-flex: 0 1 25%;
+    flex: 0 1 25%;
+    display: flex;
+	padding:15px;
+	min-width:222px;
+    border: none !important; }
+
+   #poscompare-table .poscompare-product-td.feature-name {
+   -webkit-box-flex: 0;
+    color: #333333;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: capitalize;}   
+	#poscompare-table .poscompare-product-td.poscompare-feature-td{
+    font-weight: 500;
+}
+@media (max-width: 1024px){
+  #poscompare-table .poscompare-product-td {
+     -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.33333%;
+    flex: 0 0 33.33333%; 
+	}	
+}
+@media (max-width: 767px){
+  #poscompare-table .poscompare-product-td {
+	-webkit-box-flex: 1;
+    -ms-flex: 1 0 50%;
+    flex: 1 0 50%;
+	}	
+  #poscompare-table .poscompare-product-td.feature-name {
+   display:none;
+   } 
+}
+@media (max-width: 479px){
+  #poscompare-table .poscompare-product-td {
+	-webkit-box-flex: 1;
+    -ms-flex: 1 0 100%;
+    flex: 1 0 100%;
+	}	
+}
+
+  #poscompare-table .poscompare-product-tr {
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    background: none ; }
+#poscompare-table .poscompare-product-row:nth-child(even),#poscompare-table .poscompare-product-row:nth-child(even) .poscompare-product-td{
+	background-color: #eeeeee;
+}
+  #poscompare-table .poscompare-product {
+    padding-top: 2.0rem;
+    position: relative; }
+  #poscompare-table .poscompare-product .poscompare-remove {
+    position: absolute;
+    right: 0;
+    top: 0; }
+
+.compare-button .added {
+  display: none; }
+
+.compare-button.poscompare-added .added {
+  display: inline-block; }
+
+.compare-button.poscompare-added .not-added {
+  display: none; }
+#poscompare-notification {
+	display:none;
+}
+.ar-blocked{
+    position: relative;
+}
+.ar-loading{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,0.5);
+}
+.ar-loading .ar-loading-inner{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    padding: 15px;
+    border-radius: 2px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+    border: 1px solid #AAAAAA;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: url('../img/ring-alt.gif') no-repeat 6px 8px scroll  #FFFFFF;
+}
+/* style iteam-products */
+.poscompare-product {
+	margin-bottom:30px;
+	display:inline-block;
+	width:100%;
+}
+.js-poscompare-remove-all {
+	display:inline-block;
+	height:25px;
+}
+.poscompare-product  .js-poscompare-remove{
+	padding-right: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.poscompare-product  .js-poscompare-remove:after, .poscompare-product  .js-poscompare-remove:before {
+    content: " ";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 15px;
+    height: 2px;
+    display: inline-block;
+	 transform: rotate(0);
+    -webkit-transform: rotate(0);
+    background-color: currentColor;
+    -webkit-transition: background-color .2s ease-in-out,transform .2s ease-in-out,width .2s ease-in-out;
+    -webkit-transition: background-color .2s ease-in-out,width .2s ease-in-out,-webkit-transform .2s ease-in-out;
+    transition: background-color .2s ease-in-out,width .2s ease-in-out,-webkit-transform .2s ease-in-out;
+    transition: background-color .2s ease-in-out,transform .2s ease-in-out,width .2s ease-in-out;
+    transition: background-color .2s ease-in-out,transform .2s ease-in-out,width .2s ease-in-out,-webkit-transform .2s ease-in-out;
+}
+.poscompare-product  .js-poscompare-remove:hover:before {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+.poscompare-product  .js-poscompare-remove:hover:after {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+.poscompare-product .thumb-mask {
+	margin-bottom:20px;
+}
+.poscompare-product .thumb-mask img {
+	width:100%;
+}
+.poscompare-product .desc-box .product_name {
+	font-size:14px;
+	margin-bottom:10px;
+	font-weight:500;
+	display:block;
+	white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.poscompare-product .desc-box .hook-reviews {
+	margin-bottom:10px;
+}
+.poscompare-product .desc-box .hook-reviews .nb-comments {
+	display:none;
+}
+.poscompare-product .desc-box .product-price-and-shipping .regular-price {
+    font-size: 14px;
+    color: #666666;
+    font-weight: 400;
+    text-decoration: line-through;
+    margin-right: 5px;
+}
+.poscompare-product .desc-box .product-price-and-shipping .price {
+
+}
+.poscompare-product .desc-box  div.cart button.ajax_add_to_cart_button, .poscompare-product .desc-box  div.cart span.ajax_add_to_cart_button {
+  margin-top:20px;
+  display: inline-block;
+  background: #333333;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0;
+  border: none;
+  line-height: 40px;
+  height: 40px;
+  width: auto;
+  padding: 0 40px;
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: capitalize;
+  border-radius: 25px;
+  position: relative;
+  z-index: 1;
+  
+}
+.poscompare-product .desc-box  div.cart button.ajax_add_to_cart_button i, .poscompare-product .desc-box  div.cart span.ajax_add_to_cart_button i {
+	display:none;
+}
+.poscompare-product .desc-box  div.cart button.ajax_add_to_cart_button:hover, .poscompare-product .desc-box  div.cart span.ajax_add_to_cart_button:hover {
+  -webkit-transition: all 300ms linear;
+  -moz-transition: all 300ms linear;
+  -ms-transition: all 300ms linear;
+  -o-transition: all 300ms linear;
+  transition: all 300ms linear;
+}
+/* end style iteam-products */
+/*# sourceMappingURL=front.css.map*/

@@ -1,0 +1,41 @@
+{shop_url}
+
+مبارك!
+
+A new order was placed on {shop_name} by the following customer: {firstname} {lastname} ({email})
+
+تفاصيل الطلب
+
+الطلب: {order_name} وضع في {date}
+
+أسلوب الدفع: {payment}
+
+المرجع	منتج	سعر الوحدة	الكمية	السعر الإجمالي   {items}
+المنتجات	{total_products}
+خصومات	{total_discounts}
+تغليف الهدايا	{total_wrapping}
+الشحن	{total_shipping}
+Including total tax	{total_tax_paid}
+إجمالي المدفوعات	{total_paid}
+
+جهة الشحن
+
+جهة الشحن: {carrier}
+
+أسلوب الدفع: {payment}
+
+عنوان التوصيل
+
+{delivery_block_html}
+
+عنوان الفواتير
+
+{invoice_block_html}
+
+رسالة العميل:
+
+{message}
+
+[{shop_name}]({shop_url})
+
+Powered by [PrestaShop](https://www.prestashop.com/?utm_source=marchandprestashop&utm_medium=e-mail=utm_campaign=footer_1-7)
