@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>statssearch</name>
+    <displayName><![CDATA[Recherches de la boutique]]></displayName>
+    <version><![CDATA[2.0.1]]></version>
+    <description><![CDATA[Ajouter un onglet au tableau de bord, affichant les mots-cl&eacute;s les plus recherch&eacute;s par les visiteurs de votre boutique.]]></description>
+    <author><![CDATA[PrestaShop]]></author>
+    <tab><![CDATA[analytics_stats]]></tab>
+    <is_configurable>0</is_configurable>
+    <need_instance>0</need_instance>
+	<limited_countries></limited_countries>
+</module>

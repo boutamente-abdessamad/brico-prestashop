@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-06-30 00:11:48
+/* Smarty version 3.1.33, created on 2020-07-03 01:13:27
   from 'C:\wamp64\www\prestashop\modules\possearchproducts\views\templates\front\category-tree-branch.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5efa753494db42_91060073',
+  'unifunc' => 'content_5efe7827c8fb17_08716785',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:modules/possearchproducts/views/templates/front/category-tree-branch.tpl' => 2,
   ),
 ),false)) {
-function content_5efa753494db42_91060073 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5efe7827c8fb17_08716785 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <option value="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['node']->value['id'], ENT_QUOTES, 'UTF-8');?>
 ">

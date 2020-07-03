@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-06-30 00:11:49
+/* Smarty version 3.1.33, created on 2020-07-03 01:13:29
   from 'module:xipblogdisplaypostsviewst' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5efa7535734b70_42767645',
+  'unifunc' => 'content_5efe78290dc277_84512108',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'module:xipblogdisplayposts/views/templates/front/post-gallery.tpl' => 2,
   ),
 ),false)) {
-function content_5efa7535734b70_42767645 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5efe78290dc277_84512108 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\wamp64\\www\\prestashop\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.date_format.php','function'=>'smarty_modifier_date_format',),));
 ?>
 

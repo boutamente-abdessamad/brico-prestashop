@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-06-30 00:11:48
+/* Smarty version 3.1.33, created on 2020-07-03 01:13:27
   from 'C:\wamp64\www\prestashop\modules\blockwishlist\blockwishlist_top.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5efa7534393e71_88269597',
+  'unifunc' => 'content_5efe7827df7f82_67933903',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5efa7534393e71_88269597 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5efe7827df7f82_67933903 (Smarty_Internal_Template $_smarty_tpl) {
 echo '<script'; ?>
  type="text/javascript">
 var wishlistProductsIds='';

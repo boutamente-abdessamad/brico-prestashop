@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-07-01 23:36:09
+/* Smarty version 3.1.33, created on 2020-07-03 01:13:30
   from 'C:\wamp64\www\prestashop\themes\theme_madina1\modules\postabcateslider\product_cate.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5efd0fd9c76065_50351961',
+  'unifunc' => 'content_5efe782af411f5_93145896',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:catalog/_partials/miniatures/product.tpl' => 1,
   ),
 ),false)) {
-function content_5efd0fd9c76065_50351961 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5efe782af411f5_93145896 (Smarty_Internal_Template $_smarty_tpl) {
 if ($_smarty_tpl->tpl_vars['productCate']->value) {?>
 	<div class='imgSpinner'> </div>	
 		<div class="productTabCategorySlider owl-carousel">						

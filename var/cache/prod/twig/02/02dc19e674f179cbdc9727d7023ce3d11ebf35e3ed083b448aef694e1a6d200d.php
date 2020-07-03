@@ -133,7 +133,7 @@ class __TwigTemplate_0314e91162ae3fef4f1e653a6683e30c7e2d2c39da86b9aa5761a2f68f7
 
             ";
         // line 86
-        $this->loadTemplate("@PrestaShop/Admin/Improve/Design/Theme/index.html.twig", "@PrestaShop/Admin/Improve/Design/Theme/index.html.twig", 86, "180269698")->display(twig_array_merge($context, ["themeName" => $this->getAttribute(        // line 87
+        $this->loadTemplate("@PrestaShop/Admin/Improve/Design/Theme/index.html.twig", "@PrestaShop/Admin/Improve/Design/Theme/index.html.twig", 86, "113735891")->display(twig_array_merge($context, ["themeName" => $this->getAttribute(        // line 87
 ($context["currentlyUsedTheme"] ?? null), "name", []), "themeVersion" => $this->getAttribute(        // line 88
 ($context["currentlyUsedTheme"] ?? null), "get", [0 => "version"], "method"), "themeAuthor" => $this->getAttribute(        // line 89
 ($context["currentlyUsedTheme"] ?? null), "get", [0 => "author.name"], "method"), "isActive" => true]));
@@ -162,7 +162,7 @@ class __TwigTemplate_0314e91162ae3fef4f1e653a6683e30c7e2d2c39da86b9aa5761a2f68f7
             foreach ($context['_seq'] as $context["_key"] => $context["theme"]) {
                 // line 105
                 echo "                ";
-                $this->loadTemplate("@PrestaShop/Admin/Improve/Design/Theme/index.html.twig", "@PrestaShop/Admin/Improve/Design/Theme/index.html.twig", 105, "1738535710")->display(twig_array_merge($context, ["themeName" => $this->getAttribute(                // line 106
+                $this->loadTemplate("@PrestaShop/Admin/Improve/Design/Theme/index.html.twig", "@PrestaShop/Admin/Improve/Design/Theme/index.html.twig", 105, "1374301825")->display(twig_array_merge($context, ["themeName" => $this->getAttribute(                // line 106
 $context["theme"], "name", []), "themeVersion" => $this->getAttribute(                // line 107
 $context["theme"], "get", [0 => "version"], "method"), "themeAuthor" => $this->getAttribute(                // line 108
 $context["theme"], "get", [0 => "author.name"], "method"), "isActive" => false]));
@@ -195,7 +195,7 @@ $context["theme"], "get", [0 => "author.name"], "method"), "isActive" => false])
         echo "
             ";
         // line 140
-        $this->loadTemplate("@PrestaShop/Admin/Improve/Design/Theme/index.html.twig", "@PrestaShop/Admin/Improve/Design/Theme/index.html.twig", 140, "1381481678")->display($context);
+        $this->loadTemplate("@PrestaShop/Admin/Improve/Design/Theme/index.html.twig", "@PrestaShop/Admin/Improve/Design/Theme/index.html.twig", 140, "1277422602")->display($context);
         // line 156
         echo "
             ";
@@ -256,7 +256,7 @@ $context["theme"], "get", [0 => "author.name"], "method"), "isActive" => false])
 
 
 /* @PrestaShop/Admin/Improve/Design/Theme/index.html.twig */
-class __TwigTemplate_0314e91162ae3fef4f1e653a6683e30c7e2d2c39da86b9aa5761a2f68f704d51___180269698 extends \Twig\Template
+class __TwigTemplate_0314e91162ae3fef4f1e653a6683e30c7e2d2c39da86b9aa5761a2f68f704d51___113735891 extends \Twig\Template
 {
     public function __construct(Environment $env)
     {
@@ -338,7 +338,7 @@ class __TwigTemplate_0314e91162ae3fef4f1e653a6683e30c7e2d2c39da86b9aa5761a2f68f7
 
 
 /* @PrestaShop/Admin/Improve/Design/Theme/index.html.twig */
-class __TwigTemplate_0314e91162ae3fef4f1e653a6683e30c7e2d2c39da86b9aa5761a2f68f704d51___1738535710 extends \Twig\Template
+class __TwigTemplate_0314e91162ae3fef4f1e653a6683e30c7e2d2c39da86b9aa5761a2f68f704d51___1374301825 extends \Twig\Template
 {
     public function __construct(Environment $env)
     {
@@ -447,7 +447,7 @@ class __TwigTemplate_0314e91162ae3fef4f1e653a6683e30c7e2d2c39da86b9aa5761a2f68f7
 
 
 /* @PrestaShop/Admin/Improve/Design/Theme/index.html.twig */
-class __TwigTemplate_0314e91162ae3fef4f1e653a6683e30c7e2d2c39da86b9aa5761a2f68f704d51___1381481678 extends \Twig\Template
+class __TwigTemplate_0314e91162ae3fef4f1e653a6683e30c7e2d2c39da86b9aa5761a2f68f704d51___1277422602 extends \Twig\Template
 {
     public function __construct(Environment $env)
     {

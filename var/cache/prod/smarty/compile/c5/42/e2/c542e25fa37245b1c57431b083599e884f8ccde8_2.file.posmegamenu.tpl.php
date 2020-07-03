@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-06-30 21:21:45
+/* Smarty version 3.1.33, created on 2020-07-03 01:13:28
   from 'C:\wamp64\www\prestashop\modules\posmegamenu\views\templates\hook\posmegamenu.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5efb9ed9b4b9c9_05676392',
+  'unifunc' => 'content_5efe7828401756_37294640',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5efb9ed9b4b9c9_05676392 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5efe7828401756_37294640 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -173,7 +173,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 "><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['sub_menu_item']->value['product']['name'], ENT_QUOTES, 'UTF-8');?>
 </a></h3>
 																	<?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_5620035375efb9ed9abb834_79879669', 'product_reviews');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_6481580625efe78283cbdd1_05049530', 'product_reviews');
 ?>
  
 																	<?php if ($_smarty_tpl->tpl_vars['sub_menu_item']->value['product']['show_price']) {?>
@@ -252,12 +252,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 </div>
 </div><?php }
 /* {block 'product_reviews'} */
-class Block_5620035375efb9ed9abb834_79879669 extends Smarty_Internal_Block
+class Block_6481580625efe78283cbdd1_05049530 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'product_reviews' => 
   array (
-    0 => 'Block_5620035375efb9ed9abb834_79879669',
+    0 => 'Block_6481580625efe78283cbdd1_05049530',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {

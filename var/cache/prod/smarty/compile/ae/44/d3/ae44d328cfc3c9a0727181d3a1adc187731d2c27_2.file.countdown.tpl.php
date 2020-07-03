@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-06-30 00:11:46
+/* Smarty version 3.1.33, created on 2020-07-03 01:13:26
   from 'C:\wamp64\www\prestashop\modules\poscountdown\views\templates\hook\countdown.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5efa7532eb2a36_89467163',
+  'unifunc' => 'content_5efe78269a0025_25051995',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5efa7532eb2a36_89467163 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5efe78269a0025_25051995 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_checkPlugins(array(0=>array('file'=>'C:\\wamp64\\www\\prestashop\\vendor\\smarty\\smarty\\libs\\plugins\\modifier.date_format.php','function'=>'smarty_modifier_date_format',),));
 if ($_smarty_tpl->tpl_vars['enddate']->value != null && $_smarty_tpl->tpl_vars['enddate']->value > 0) {?>
 	<div class="countdown" >

@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-06-30 21:21:47
+/* Smarty version 3.1.33, created on 2020-07-03 01:13:28
   from 'C:\wamp64\www\prestashop\modules\posslideshows\views\templates\hook\slider.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5efb9edb6856d9_04686138',
+  'unifunc' => 'content_5efe782880aaf1_40934080',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5efb9edb6856d9_04686138 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5efe782880aaf1_40934080 (Smarty_Internal_Template $_smarty_tpl) {
 if ($_smarty_tpl->tpl_vars['homeslider']->value['slides']) {?>
 <div class="slideshow_container" data-speed="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['homeslider']->value['speed'], ENT_QUOTES, 'UTF-8');?>
 " data-time="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['homeslider']->value['time'], ENT_QUOTES, 'UTF-8');?>

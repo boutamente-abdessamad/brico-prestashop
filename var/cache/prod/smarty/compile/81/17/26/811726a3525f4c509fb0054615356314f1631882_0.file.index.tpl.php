@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-06-30 20:31:32
+/* Smarty version 3.1.33, created on 2020-07-03 01:14:58
   from 'C:\wamp64\www\prestashop\modules\ps_themecusto\views\templates\admin\controllers\configuration\index.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5efb9314a39816_52746928',
+  'unifunc' => 'content_5efe7882531828_15897767',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:./elem/modal.tpl' => 1,
   ),
 ),false)) {
-function content_5efb9314a39816_52746928 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5efe7882531828_15897767 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div id="psthemecusto">
     <?php if ($_smarty_tpl->tpl_vars['is_ps_ready']->value) {?>

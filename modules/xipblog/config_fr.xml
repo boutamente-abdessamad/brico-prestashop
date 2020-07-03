@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>xipblog</name>
+    <displayName><![CDATA[Prestashop Blog Module by xpert-idea.com]]></displayName>
+    <version><![CDATA[2.0.0]]></version>
+    <description><![CDATA[Prestashop Blog Module by xpert-idea.com . standrad,audio,video,gellery post format supported.]]></description>
+    <author><![CDATA[xpert-idea.com]]></author>
+    <tab><![CDATA[front_office_features]]></tab>
+    <is_configurable>1</is_configurable>
+    <need_instance>1</need_instance>
+	<limited_countries></limited_countries>
+</module>

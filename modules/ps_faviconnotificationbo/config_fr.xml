@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>ps_faviconnotificationbo</name>
+    <displayName><![CDATA[Notifications de Commande sur le Favicon]]></displayName>
+    <version><![CDATA[2.0.0]]></version>
+    <description><![CDATA[Etre notifi&eacute; &agrave; chaque nouvelle commande, nouveau client ou message directement dans l&#039;onglet du navigateur, m&ecirc;me naviguant sur une autre page]]></description>
+    <author><![CDATA[PrestaShop]]></author>
+    <tab><![CDATA[administration]]></tab>
+	<confirmUninstall><![CDATA[Êtes-vous sûr de vouloir désinstaller ce module ?]]></confirmUninstall>
+    <is_configurable>1</is_configurable>
+    <need_instance>1</need_instance>
+	<limited_countries></limited_countries>
+</module>

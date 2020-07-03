@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-06-30 00:11:44
+/* Smarty version 3.1.33, created on 2020-07-03 01:13:24
   from 'module:posfeaturedproductsviewst' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5efa7530bd0801_81450311',
+  'unifunc' => 'content_5efe7824d4c7d0_73333140',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -21,7 +21,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:catalog/_partials/miniatures/product.tpl' => 1,
   ),
 ),false)) {
-function content_5efa7530bd0801_81450311 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5efe7824d4c7d0_73333140 (Smarty_Internal_Template $_smarty_tpl) {
 ?>
 <div class="pos-featured-products" 
 	data-items="<?php echo htmlspecialchars($_smarty_tpl->tpl_vars['slider_options']->value['number_item'], ENT_QUOTES, 'UTF-8');?>

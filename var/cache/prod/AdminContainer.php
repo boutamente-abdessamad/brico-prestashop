@@ -289,7 +289,7 @@ class AdminContainer extends Container
      */
     protected function getDoctrine_Dbal_DefaultConnectionService()
     {
-        return $this->services['doctrine.dbal.default_connection'] = ${($_ = isset($this->services['doctrine.dbal.connection_factory']) ? $this->services['doctrine.dbal.connection_factory'] : ($this->services['doctrine.dbal.connection_factory'] = new \Doctrine\Bundle\DoctrineBundle\ConnectionFactory([]))) && false ?: '_'}->createConnection(['driver' => 'pdo_mysql', 'host' => 'localhost', 'port' => '', 'dbname' => 'presta_db', 'user' => 'root', 'password' => '', 'charset' => 'UTF8', 'driverOptions' => [1002 => 'SET sql_mode=(SELECT REPLACE(@@sql_mode,\'ONLY_FULL_GROUP_BY\',\'\'))'], 'serverVersion' => 5.1, 'defaultTableOptions' => []], new \Doctrine\DBAL\Configuration(), new \Symfony\Bridge\Doctrine\ContainerAwareEventManager($this), ['enum' => 'string']);
+        return $this->services['doctrine.dbal.default_connection'] = ${($_ = isset($this->services['doctrine.dbal.connection_factory']) ? $this->services['doctrine.dbal.connection_factory'] : ($this->services['doctrine.dbal.connection_factory'] = new \Doctrine\Bundle\DoctrineBundle\ConnectionFactory([]))) && false ?: '_'}->createConnection(['driver' => 'pdo_mysql', 'host' => 'localhost', 'port' => '3306', 'dbname' => 'presta_db', 'user' => 'root', 'password' => '', 'charset' => 'UTF8', 'driverOptions' => [1002 => 'SET sql_mode=(SELECT REPLACE(@@sql_mode,\'ONLY_FULL_GROUP_BY\',\'\'))'], 'serverVersion' => 5.1, 'defaultTableOptions' => []], new \Doctrine\DBAL\Configuration(), new \Symfony\Bridge\Doctrine\ContainerAwareEventManager($this), ['enum' => 'string']);
     }
 
     /**
@@ -1092,7 +1092,7 @@ class AdminContainer extends Container
     {
         return [
             'database_host' => 'localhost',
-            'database_port' => '',
+            'database_port' => '3306',
             'database_name' => 'presta_db',
             'database_user' => 'root',
             'database_password' => '',
@@ -1204,6 +1204,9 @@ class AdminContainer extends Container
                 80 => 'poslogo',
                 81 => 'xipblog',
                 82 => 'xipblogdisplayposts',
+                83 => 'ps_bestsellers',
+                84 => 'ps_newproducts',
+                85 => 'ps_specials',
             ],
             'ps_cache_dir' => 'C:\\wamp64\\www\\prestashop/var/cache/prod\\',
             'mail_themes_uri' => '/mails/themes',

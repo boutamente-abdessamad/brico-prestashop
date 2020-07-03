@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-06-30 21:21:46
+/* Smarty version 3.1.33, created on 2020-07-03 01:13:28
   from 'C:\wamp64\www\prestashop\modules\posvegamenu\views\templates\hook\posvegamenu.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5efb9eda93b101_01699697',
+  'unifunc' => 'content_5efe782802e188_48830320',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5efb9eda93b101_01699697 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5efe782802e188_48830320 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, false);
 ?>
@@ -176,7 +176,7 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 "><?php echo htmlspecialchars($_smarty_tpl->tpl_vars['sub_menu_item']->value['product']['name'], ENT_QUOTES, 'UTF-8');?>
 </a></h3>
 																		<?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_11378652585efb9eda8a0874_44290316', 'product_reviews');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_10462019755efe7827f375d1_57988076', 'product_reviews');
 ?>
  
 																		<?php if ($_smarty_tpl->tpl_vars['sub_menu_item']->value['product']['show_price']) {?>
@@ -255,12 +255,12 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 </div>
 </div><?php }
 /* {block 'product_reviews'} */
-class Block_11378652585efb9eda8a0874_44290316 extends Smarty_Internal_Block
+class Block_10462019755efe7827f375d1_57988076 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'product_reviews' => 
   array (
-    0 => 'Block_11378652585efb9eda8a0874_44290316',
+    0 => 'Block_10462019755efe7827f375d1_57988076',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {

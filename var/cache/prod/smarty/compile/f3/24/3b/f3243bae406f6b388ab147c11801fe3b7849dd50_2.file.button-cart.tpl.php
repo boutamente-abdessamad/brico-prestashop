@@ -1,11 +1,11 @@
 <?php
-/* Smarty version 3.1.33, created on 2020-06-30 00:11:45
+/* Smarty version 3.1.33, created on 2020-07-03 01:13:25
   from 'C:\wamp64\www\prestashop\themes\theme_madina1\templates\catalog\_partials\customize\button-cart.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5efa75318893d5_17577401',
+  'unifunc' => 'content_5efe7825946794_11024391',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5efa75318893d5_17577401 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5efe7825946794_11024391 (Smarty_Internal_Template $_smarty_tpl) {
 if (!$_smarty_tpl->tpl_vars['configuration']->value['is_catalog']) {
 if (($_smarty_tpl->tpl_vars['product']->value['quantity'] > 0 || $_smarty_tpl->tpl_vars['product']->value['allow_oosp'])) {?>
 <div class="product-add-to-cart">	

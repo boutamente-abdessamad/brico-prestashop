@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jul 02, 2020 at 12:22 AM
+-- Generation Time: Jul 03, 2020 at 10:39 PM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.3.12
 
@@ -20697,7 +20697,7 @@ CREATE TABLE IF NOT EXISTS `ps_authorization_role` (
   `slug` varchar(255) NOT NULL,
   PRIMARY KEY (`id_authorization_role`),
   UNIQUE KEY `slug` (`slug`)
-) ENGINE=InnoDB AUTO_INCREMENT=925 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=937 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `ps_authorization_role`
@@ -20840,6 +20840,10 @@ INSERT INTO `ps_authorization_role` (`id_authorization_role`, `slug`) VALUES
 (520, 'ROLE_MOD_MODULE_PS_BANNER_DELETE'),
 (518, 'ROLE_MOD_MODULE_PS_BANNER_READ'),
 (519, 'ROLE_MOD_MODULE_PS_BANNER_UPDATE'),
+(925, 'ROLE_MOD_MODULE_PS_BESTSELLERS_CREATE'),
+(928, 'ROLE_MOD_MODULE_PS_BESTSELLERS_DELETE'),
+(926, 'ROLE_MOD_MODULE_PS_BESTSELLERS_READ'),
+(927, 'ROLE_MOD_MODULE_PS_BESTSELLERS_UPDATE'),
 (769, 'ROLE_MOD_MODULE_PS_BUYBUTTONLITE_CREATE'),
 (772, 'ROLE_MOD_MODULE_PS_BUYBUTTONLITE_DELETE'),
 (770, 'ROLE_MOD_MODULE_PS_BUYBUTTONLITE_READ'),
@@ -20912,6 +20916,10 @@ INSERT INTO `ps_authorization_role` (`id_authorization_role`, `slug`) VALUES
 (752, 'ROLE_MOD_MODULE_PS_MBO_DELETE'),
 (750, 'ROLE_MOD_MODULE_PS_MBO_READ'),
 (751, 'ROLE_MOD_MODULE_PS_MBO_UPDATE'),
+(929, 'ROLE_MOD_MODULE_PS_NEWPRODUCTS_CREATE'),
+(932, 'ROLE_MOD_MODULE_PS_NEWPRODUCTS_DELETE'),
+(930, 'ROLE_MOD_MODULE_PS_NEWPRODUCTS_READ'),
+(931, 'ROLE_MOD_MODULE_PS_NEWPRODUCTS_UPDATE'),
 (589, 'ROLE_MOD_MODULE_PS_SEARCHBAR_CREATE'),
 (592, 'ROLE_MOD_MODULE_PS_SEARCHBAR_DELETE'),
 (590, 'ROLE_MOD_MODULE_PS_SEARCHBAR_READ'),
@@ -20928,6 +20936,10 @@ INSERT INTO `ps_authorization_role` (`id_authorization_role`, `slug`) VALUES
 (604, 'ROLE_MOD_MODULE_PS_SOCIALFOLLOW_DELETE'),
 (602, 'ROLE_MOD_MODULE_PS_SOCIALFOLLOW_READ'),
 (603, 'ROLE_MOD_MODULE_PS_SOCIALFOLLOW_UPDATE'),
+(933, 'ROLE_MOD_MODULE_PS_SPECIALS_CREATE'),
+(936, 'ROLE_MOD_MODULE_PS_SPECIALS_DELETE'),
+(934, 'ROLE_MOD_MODULE_PS_SPECIALS_READ'),
+(935, 'ROLE_MOD_MODULE_PS_SPECIALS_UPDATE'),
 (605, 'ROLE_MOD_MODULE_PS_THEMECUSTO_CREATE'),
 (608, 'ROLE_MOD_MODULE_PS_THEMECUSTO_DELETE'),
 (606, 'ROLE_MOD_MODULE_PS_THEMECUSTO_READ'),
@@ -22339,18 +22351,19 @@ CREATE TABLE IF NOT EXISTS `ps_cms` (
   `active` tinyint(1) UNSIGNED NOT NULL DEFAULT 0,
   `indexation` tinyint(1) UNSIGNED NOT NULL DEFAULT 1,
   PRIMARY KEY (`id_cms`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `ps_cms`
 --
 
 INSERT INTO `ps_cms` (`id_cms`, `id_cms_category`, `position`, `active`, `indexation`) VALUES
-(1, 1, 0, 0, 0),
-(2, 1, 1, 0, 0),
-(3, 1, 2, 0, 0),
-(4, 1, 3, 0, 0),
-(5, 1, 4, 0, 0);
+(1, 1, 0, 1, 0),
+(2, 1, 1, 1, 0),
+(3, 1, 2, 1, 0),
+(4, 1, 3, 1, 0),
+(5, 1, 4, 1, 0),
+(6, 1, 5, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -22369,14 +22382,15 @@ CREATE TABLE IF NOT EXISTS `ps_cms_category` (
   `position` int(10) UNSIGNED NOT NULL DEFAULT 0,
   PRIMARY KEY (`id_cms_category`),
   KEY `category_parent` (`id_parent`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `ps_cms_category`
 --
 
 INSERT INTO `ps_cms_category` (`id_cms_category`, `id_parent`, `level_depth`, `active`, `date_add`, `date_upd`, `position`) VALUES
-(1, 0, 1, 1, '2020-06-29 22:39:35', '2020-06-29 22:39:35', 0);
+(1, 0, 1, 1, '2020-06-29 22:39:35', '2020-06-29 22:39:35', 0),
+(2, 1, 2, 0, '2020-07-03 00:54:45', '2020-07-03 00:57:16', 0);
 
 -- --------------------------------------------------------
 
@@ -22405,7 +22419,9 @@ CREATE TABLE IF NOT EXISTS `ps_cms_category_lang` (
 
 INSERT INTO `ps_cms_category_lang` (`id_cms_category`, `id_lang`, `id_shop`, `name`, `description`, `link_rewrite`, `meta_title`, `meta_keywords`, `meta_description`) VALUES
 (1, 1, 1, 'Accueil', '', 'accueil', '', '', ''),
-(1, 2, 1, 'الصفحة الرئيسية', '', '????????????-????????????????', '', '', '');
+(1, 2, 1, 'الصفحة الرئيسية', '', '????????????-????????????????', '', '', ''),
+(2, 1, 1, 'Promotions', '', 'promotions', '', '', ''),
+(2, 2, 1, 'Promotions', '', 'promotions', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -22419,14 +22435,15 @@ CREATE TABLE IF NOT EXISTS `ps_cms_category_shop` (
   `id_shop` int(11) UNSIGNED NOT NULL,
   PRIMARY KEY (`id_cms_category`,`id_shop`),
   KEY `id_shop` (`id_shop`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `ps_cms_category_shop`
 --
 
 INSERT INTO `ps_cms_category_shop` (`id_cms_category`, `id_shop`) VALUES
-(1, 1);
+(1, 1),
+(2, 1);
 
 -- --------------------------------------------------------
 
@@ -22462,7 +22479,9 @@ INSERT INTO `ps_cms_lang` (`id_cms`, `id_lang`, `id_shop`, `meta_title`, `head_s
 (4, 1, 1, 'A propos', '', 'En savoir plus sur notre entreprise', 'à propos, informations', '<h1 class=\"page-heading bottom-indent\">A propos</h1>\r\n<div class=\"row\">\r\n<div class=\"col-xs-12 col-sm-4\">\r\n<div class=\"cms-block\">\r\n<h3 class=\"page-subheading\">Notre entreprise</h3>\r\n<p><strong class=\"dark\">Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididun.</strong></p>\r\n<p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet conse ctetur adipisicing elit.</p>\r\n<ul class=\"list-1\">\r\n<li><em class=\"icon-ok\"></em>Produits haute qualité</li>\r\n<li><em class=\"icon-ok\"></em>Service client inégalé</li>\r\n<li><em class=\"icon-ok\"></em>Remboursement garanti pendant 30 jours</li>\r\n</ul>\r\n</div>\r\n</div>\r\n<div class=\"col-xs-12 col-sm-4\">\r\n<div class=\"cms-box\">\r\n<h3 class=\"page-subheading\">Notre équipe</h3>\r\n<img title=\"cms-img\" src=\"../img/cms/cms-img.jpg\" alt=\"cms-img\" width=\"370\" height=\"192\" />\r\n<p><strong class=\"dark\">Lorem set sint occaecat cupidatat non </strong></p>\r\n<p>Eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>\r\n</div>\r\n</div>\r\n<div class=\"col-xs-12 col-sm-4\">\r\n<div class=\"cms-box\">\r\n<h3 class=\"page-subheading\">Témoignages</h3>\r\n<div class=\"testimonials\">\r\n<div class=\"inner\"><span class=\"before\">“</span>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.<span class=\"after\">”</span></div>\r\n</div>\r\n<p><strong class=\"dark\">Lorem ipsum dolor sit</strong></p>\r\n<div class=\"testimonials\">\r\n<div class=\"inner\"><span class=\"before\">“</span>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet conse ctetur adipisicing elit. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod.<span class=\"after\">”</span></div>\r\n</div>\r\n<p><strong class=\"dark\">Ipsum dolor sit</strong></p>\r\n</div>\r\n</div>\r\n</div>', 'a-propos'),
 (4, 2, 1, 'About us', '', 'Learn more about us', 'about us, informations', '<h1 class=\"page-heading bottom-indent\">About us</h1>\r\n<div class=\"row\">\r\n<div class=\"col-xs-12 col-sm-4\">\r\n<div class=\"cms-block\">\r\n<h3 class=\"page-subheading\">Our company</h3>\r\n<p><strong class=\"dark\">Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididun.</strong></p>\r\n<p>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Lorem ipsum dolor sit amet conse ctetur adipisicing elit.</p>\r\n<ul class=\"list-1\">\r\n<li><em class=\"icon-ok\"></em>Top quality products</li>\r\n<li><em class=\"icon-ok\"></em>Best customer service</li>\r\n<li><em class=\"icon-ok\"></em>30-days money back guarantee</li>\r\n</ul>\r\n</div>\r\n</div>\r\n<div class=\"col-xs-12 col-sm-4\">\r\n<div class=\"cms-box\">\r\n<h3 class=\"page-subheading\">Our team</h3>\r\n<img title=\"cms-img\" src=\"../img/cms/cms-img.jpg\" alt=\"cms-img\" width=\"370\" height=\"192\" />\r\n<p><strong class=\"dark\">Lorem set sint occaecat cupidatat non </strong></p>\r\n<p>Eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>\r\n</div>\r\n</div>\r\n<div class=\"col-xs-12 col-sm-4\">\r\n<div class=\"cms-box\">\r\n<h3 class=\"page-subheading\">Testimonials</h3>\r\n<div class=\"testimonials\">\r\n<div class=\"inner\"><span class=\"before\">“</span>Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.<span class=\"after\">”</span></div>\r\n</div>\r\n<p><strong class=\"dark\">Lorem ipsum dolor sit</strong></p>\r\n<div class=\"testimonials\">\r\n<div class=\"inner\"><span class=\"before\">“</span>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet conse ctetur adipisicing elit. Lorem ipsum dolor sit amet conse ctetur adipisicing elit, sed do eiusmod.<span class=\"after\">”</span></div>\r\n</div>\r\n<p><strong class=\"dark\">Ipsum dolor sit</strong></p>\r\n</div>\r\n</div>\r\n</div>', 'about-us'),
 (5, 1, 1, 'Paiement sécurisé', '', 'Notre méthode de paiement sécurisé', 'paiement sécurisé, ssl, visa, mastercard, paypal', '<h2>Paiement sécurisé</h2>\r\n<h3>Notre paiement sécurisé</h3><p>Avec SSL</p>\r\n<h3>Avec Visa/Mastercard/Paypal</h3><p>A propos de ce service</p>', 'paiement-securise'),
-(5, 2, 1, 'Secure payment', '', 'Our secure payment method', 'secure payment, ssl, visa, mastercard, paypal', '<h2>Secure payment</h2>\r\n<h3>Our secure payment</h3><p>With SSL</p>\r\n<h3>Using Visa/Mastercard/Paypal</h3><p>About this service</p>', 'secure-payment');
+(5, 2, 1, 'Secure payment', '', 'Our secure payment method', 'secure payment, ssl, visa, mastercard, paypal', '<h2>Secure payment</h2>\r\n<h3>Our secure payment</h3><p>With SSL</p>\r\n<h3>Using Visa/Mastercard/Paypal</h3><p>About this service</p>', 'secure-payment'),
+(6, 1, 1, 'Promotions', '', '', '', '', 'promotions'),
+(6, 2, 1, 'Promotions', '', '', '', '', 'promotions');
 
 -- --------------------------------------------------------
 
@@ -22525,7 +22544,8 @@ INSERT INTO `ps_cms_shop` (`id_cms`, `id_shop`) VALUES
 (2, 1),
 (3, 1),
 (4, 1),
-(5, 1);
+(5, 1),
+(6, 1);
 
 -- --------------------------------------------------------
 
@@ -22596,7 +22616,7 @@ CREATE TABLE IF NOT EXISTS `ps_configuration` (
   KEY `name` (`name`),
   KEY `id_shop` (`id_shop`),
   KEY `id_shop_group` (`id_shop_group`)
-) ENGINE=InnoDB AUTO_INCREMENT=555 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=558 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `ps_configuration`
@@ -22607,7 +22627,7 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (2, NULL, NULL, 'PS_VERSION_DB', '1.7.6.5', '2020-06-29 22:39:35', '2020-06-29 22:39:35'),
 (3, NULL, NULL, 'PS_INSTALL_VERSION', '1.7.6.5', '2020-06-29 22:39:35', '2020-06-29 22:39:35'),
 (4, NULL, NULL, 'PS_CARRIER_DEFAULT', '1', '2020-06-29 22:39:35', '2020-06-29 22:39:35'),
-(5, NULL, NULL, 'PS_GROUP_FEATURE_ACTIVE', '1', '2020-06-29 22:39:35', '2020-06-30 21:24:43'),
+(5, NULL, NULL, 'PS_GROUP_FEATURE_ACTIVE', '1', '2020-06-29 22:39:35', '2020-07-03 00:24:59'),
 (6, NULL, NULL, 'PS_SEARCH_INDEXATION', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (7, NULL, NULL, 'PS_CURRENCY_DEFAULT', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (8, NULL, NULL, 'PS_COUNTRY_DEFAULT', '152', '0000-00-00 00:00:00', '2020-06-29 22:39:36'),
@@ -22702,7 +22722,7 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (97, NULL, NULL, 'PS_LOCALE_LANGUAGE', 'fr', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (98, NULL, NULL, 'PS_LOCALE_COUNTRY', 'ma', '0000-00-00 00:00:00', '2020-06-29 22:39:36'),
 (99, NULL, NULL, 'PS_ATTACHMENT_MAXIMUM_SIZE', '8', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(100, NULL, NULL, 'PS_SMARTY_CACHE', NULL, '0000-00-00 00:00:00', '2020-06-30 21:24:43'),
+(100, NULL, NULL, 'PS_SMARTY_CACHE', NULL, '0000-00-00 00:00:00', '2020-07-03 00:24:59'),
 (101, NULL, NULL, 'PS_DIMENSION_UNIT', 'cm', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (102, NULL, NULL, 'PS_GUEST_CHECKOUT_ENABLED', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (103, NULL, NULL, 'PS_DISPLAY_SUPPLIERS', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -22739,8 +22759,8 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (134, NULL, NULL, 'PS_SHOW_NEW_ORDERS', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (135, NULL, NULL, 'PS_SHOW_NEW_CUSTOMERS', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (136, NULL, NULL, 'PS_SHOW_NEW_MESSAGES', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(137, NULL, NULL, 'PS_FEATURE_FEATURE_ACTIVE', '1', '0000-00-00 00:00:00', '2020-06-30 21:24:43'),
-(138, NULL, NULL, 'PS_COMBINATION_FEATURE_ACTIVE', '1', '0000-00-00 00:00:00', '2020-06-30 21:24:43'),
+(137, NULL, NULL, 'PS_FEATURE_FEATURE_ACTIVE', '1', '0000-00-00 00:00:00', '2020-07-03 00:24:59'),
+(138, NULL, NULL, 'PS_COMBINATION_FEATURE_ACTIVE', '1', '0000-00-00 00:00:00', '2020-07-03 00:24:59'),
 (139, NULL, NULL, 'PS_SPECIFIC_PRICE_FEATURE_ACTIVE', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (140, NULL, NULL, 'PS_VIRTUAL_PROD_FEATURE_ACTIVE', '1', '0000-00-00 00:00:00', '2020-06-29 22:42:19'),
 (141, NULL, NULL, 'PS_CUSTOMIZATION_FEATURE_ACTIVE', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -22788,7 +22808,7 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (183, NULL, NULL, 'MANUFACTURER_DISPLAY_FORM', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (184, NULL, NULL, 'MANUFACTURER_DISPLAY_TEXT', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (185, NULL, NULL, 'MANUFACTURER_DISPLAY_TEXT_NB', '5', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(186, NULL, NULL, 'NEW_PRODUCTS_NBR', '5', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(186, NULL, NULL, 'NEW_PRODUCTS_NBR', '8', '0000-00-00 00:00:00', '2020-07-02 23:38:03'),
 (187, NULL, NULL, 'PS_TOKEN_ENABLE', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (188, NULL, NULL, 'PS_STATS_RENDER', 'graphnvd3', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (189, NULL, NULL, 'PS_STATS_OLD_CONNECT_AUTO_CLEAN', 'never', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -22863,7 +22883,7 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (258, NULL, NULL, 'PS_DASHBOARD_SIMULATION', '0', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (259, NULL, NULL, 'PS_USE_HTMLPURIFIER', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (260, NULL, NULL, 'PS_SMARTY_CACHING_TYPE', 'filesystem', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
-(261, NULL, NULL, 'PS_SMARTY_LOCAL', NULL, '0000-00-00 00:00:00', '2020-06-30 21:24:43'),
+(261, NULL, NULL, 'PS_SMARTY_LOCAL', NULL, '0000-00-00 00:00:00', '2020-07-03 00:24:59'),
 (262, NULL, NULL, 'PS_SMARTY_CLEAR_CACHE', 'everytime', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (263, NULL, NULL, 'PS_DETECT_LANG', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
 (264, NULL, NULL, 'PS_DETECT_COUNTRY', '1', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
@@ -23042,7 +23062,7 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (445, NULL, NULL, 'posfeaturedproducts_img', NULL, '2020-06-30 00:11:06', '2020-06-30 00:11:06'),
 (446, NULL, NULL, 'posfeaturedproducts_link', NULL, '2020-06-30 00:11:06', '2020-06-30 00:11:06'),
 (447, NULL, NULL, 'postabcateslider_row', '2', '2020-06-30 00:11:07', '2020-06-30 00:11:07'),
-(448, NULL, NULL, 'postabcateslider_number_item', '6', '2020-06-30 00:11:07', '2020-06-30 00:11:07'),
+(448, NULL, NULL, 'postabcateslider_number_item', '3', '2020-06-30 00:11:07', '2020-07-03 00:22:05'),
 (449, NULL, NULL, 'postabcateslider_speed_slide', '1000', '2020-06-30 00:11:07', '2020-06-30 00:11:07'),
 (450, NULL, NULL, 'postabcateslider_auto_play', '0', '2020-06-30 00:11:07', '2020-06-30 00:11:07'),
 (451, NULL, NULL, 'postabcateslider_pause_time', '3000', '2020-06-30 00:11:07', '2020-06-30 00:11:07'),
@@ -23053,18 +23073,18 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (456, NULL, NULL, 'postabcateslider_order', '1', '2020-06-30 00:11:07', '2020-06-30 00:11:07'),
 (457, NULL, NULL, 'postabcateslider_move', '1', '2020-06-30 00:11:07', '2020-06-30 00:11:07'),
 (458, NULL, NULL, 'postabcateslider_pausehover', '0', '2020-06-30 00:11:07', '2020-06-30 00:11:07'),
-(459, NULL, NULL, 'postabcateslider_per_lg', '4', '2020-06-30 00:11:07', '2020-06-30 00:11:07'),
+(459, NULL, NULL, 'postabcateslider_per_lg', '3', '2020-06-30 00:11:07', '2020-07-03 00:20:35'),
 (460, NULL, NULL, 'postabcateslider_per_md', '3', '2020-06-30 00:11:07', '2020-06-30 00:11:07'),
 (461, NULL, NULL, 'postabcateslider_per_sm', '2', '2020-06-30 00:11:07', '2020-06-30 00:11:07'),
 (462, NULL, NULL, 'postabcateslider_per_xs', '2', '2020-06-30 00:11:07', '2020-06-30 00:11:07'),
 (463, NULL, NULL, 'postabcateslider_per_xxs', '1', '2020-06-30 00:11:07', '2020-06-30 00:11:07'),
-(464, NULL, NULL, 'postabcateslider_list_cate', '3,4,5', '2020-06-30 00:11:07', '2020-06-30 00:11:07'),
+(464, NULL, NULL, 'postabcateslider_list_cate', '3,4,5,6,9', '2020-06-30 00:11:07', '2020-07-03 00:20:57'),
 (465, NULL, NULL, 'postabcateslider_title', NULL, '2020-06-30 00:11:07', '2020-06-30 00:11:07'),
 (466, NULL, NULL, 'postabcateslider_desc', NULL, '2020-06-30 00:11:07', '2020-06-30 00:11:07'),
 (467, NULL, NULL, 'postabcateslider_img', NULL, '2020-06-30 00:11:07', '2020-06-30 00:11:07'),
 (468, NULL, NULL, 'postabcateslider_link', NULL, '2020-06-30 00:11:07', '2020-06-30 00:11:07'),
-(469, NULL, NULL, 'poslistcateproduct_row', '2', '2020-06-30 00:11:07', '2020-06-30 00:11:07'),
-(470, NULL, NULL, 'poslistcateproduct_items', '3', '2020-06-30 00:11:07', '2020-06-30 00:11:07'),
+(469, NULL, NULL, 'poslistcateproduct_row', '3', '2020-06-30 00:11:07', '2020-07-03 01:56:20'),
+(470, NULL, NULL, 'poslistcateproduct_items', '3', '2020-06-30 00:11:07', '2020-07-03 01:54:59'),
 (471, NULL, NULL, 'poslistcateproduct_speed', '1000', '2020-06-30 00:11:07', '2020-06-30 00:11:07'),
 (472, NULL, NULL, 'poslistcateproduct_delay', '3000', '2020-06-30 00:11:07', '2020-06-30 00:11:07'),
 (473, NULL, NULL, 'poslistcateproduct_auto', '0', '2020-06-30 00:11:07', '2020-06-30 00:11:07'),
@@ -23079,14 +23099,14 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (482, NULL, NULL, 'poslistcateproduct_per_sm', '2', '2020-06-30 00:11:07', '2020-06-30 00:11:07'),
 (483, NULL, NULL, 'poslistcateproduct_per_xs', '1', '2020-06-30 00:11:07', '2020-06-30 00:11:07'),
 (484, NULL, NULL, 'poslistcateproduct_per_xxs', '1', '2020-06-30 00:11:07', '2020-06-30 00:11:07'),
-(485, NULL, NULL, 'poslistcategories_items', '4', '2020-06-30 00:11:07', '2020-06-30 00:11:07'),
+(485, NULL, NULL, 'poslistcategories_items', '3', '2020-06-30 00:11:07', '2020-07-03 01:09:21'),
 (486, NULL, NULL, 'poslistcategories_speed', '1000', '2020-06-30 00:11:07', '2020-06-30 00:11:07');
 INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, `name`, `value`, `date_add`, `date_upd`) VALUES
 (487, NULL, NULL, 'poslistcategories_delay', '3000', '2020-06-30 00:11:07', '2020-06-30 00:11:07'),
 (488, NULL, NULL, 'poslistcategories_auto', '0', '2020-06-30 00:11:07', '2020-06-30 00:11:07'),
 (489, NULL, NULL, 'poslistcategories_arrow', '1', '2020-06-30 00:11:07', '2020-06-30 00:11:07'),
 (490, NULL, NULL, 'poslistcategories_nav', '0', '2020-06-30 00:11:07', '2020-06-30 00:11:07'),
-(491, NULL, NULL, 'poslistcategories_per_lg', '4', '2020-06-30 00:11:07', '2020-06-30 00:11:07'),
+(491, NULL, NULL, 'poslistcategories_per_lg', '3', '2020-06-30 00:11:07', '2020-07-03 01:08:47'),
 (492, NULL, NULL, 'poslistcategories_per_md', '3', '2020-06-30 00:11:07', '2020-06-30 00:11:07'),
 (493, NULL, NULL, 'poslistcategories_per_sm', '2', '2020-06-30 00:11:07', '2020-06-30 00:11:07'),
 (494, NULL, NULL, 'poslistcategories_per_xs', '1', '2020-06-30 00:11:07', '2020-06-30 00:11:07'),
@@ -23145,11 +23165,14 @@ INSERT INTO `ps_configuration` (`id_configuration`, `id_shop_group`, `id_shop`, 
 (547, NULL, NULL, 'xipbdp_designlayout', 'general', '2020-06-30 00:11:08', '2020-06-30 00:11:08'),
 (548, NULL, NULL, 'xipbdp_numcolumn', '3', '2020-06-30 00:11:08', '2020-06-30 00:11:08'),
 (549, NULL, NULL, 'PS_LOGO_MAIL', 'brico-logo_mail-1593545577.jpg', '2020-06-30 20:32:57', '2020-06-30 20:32:57'),
-(550, NULL, NULL, 'PS_CCCCSS_VERSION', '1', '2020-06-30 21:21:39', '2020-06-30 21:24:43'),
+(550, NULL, NULL, 'PS_CCCCSS_VERSION', '1', '2020-06-30 21:21:39', '2020-07-03 00:24:59'),
 (551, NULL, NULL, 'PS_MEDIA_SERVER_1', NULL, '2020-06-30 21:21:39', '2020-06-30 21:21:39'),
 (552, NULL, NULL, 'PS_MEDIA_SERVER_2', NULL, '2020-06-30 21:21:39', '2020-06-30 21:21:39'),
 (553, NULL, NULL, 'PS_MEDIA_SERVER_3', NULL, '2020-06-30 21:21:39', '2020-06-30 21:21:39'),
-(554, NULL, NULL, 'PS_MEDIA_SERVERS', '0', '2020-06-30 21:21:39', '2020-06-30 21:21:39');
+(554, NULL, NULL, 'PS_MEDIA_SERVERS', '0', '2020-06-30 21:21:39', '2020-06-30 21:21:39'),
+(555, NULL, NULL, 'PS_BLOCK_BESTSELLERS_TO_DISPLAY', '8', '2020-07-02 23:37:58', '2020-07-02 23:37:58'),
+(556, NULL, NULL, 'BLOCKSPECIALS_SPECIALS_NBR', '8', '2020-07-02 23:38:03', '2020-07-02 23:38:03'),
+(557, NULL, NULL, 'PS_SHOWCASECARD_CMS_PAGES_CLOSED', '1', '2020-07-02 23:58:39', '2020-07-02 23:58:39');
 
 -- --------------------------------------------------------
 
@@ -23283,7 +23306,7 @@ INSERT INTO `ps_configuration_lang` (`id_configuration`, `id_lang`, `value`, `da
 (280, 2, '', NULL),
 (281, 1, 'Rupture de stock', NULL),
 (281, 2, 'غير متوفر حالياً', NULL),
-(299, 1, 'sale70.png', '2020-06-29 22:39:43'),
+(299, 1, '34839053e158a003d0af270cd9616212.png', '2020-07-03 00:38:24'),
 (299, 2, 'sale70.png', '2020-06-29 22:39:43'),
 (300, 1, '', '2020-06-29 22:39:43'),
 (300, 2, '', '2020-06-29 22:39:43'),
@@ -23295,6 +23318,7 @@ INSERT INTO `ps_configuration_lang` (`id_configuration`, `id_lang`, `value`, `da
 (344, 2, 'I agree to the terms and conditions and the privacy policy', '2020-06-29 22:41:16'),
 (346, 1, 'J\'accepte les conditions générales et la politique de confidentialité', '2020-06-29 22:41:16'),
 (346, 2, 'I agree to the terms and conditions and the privacy policy', '2020-06-29 22:41:16'),
+(387, 1, 'Tous les categories', '2020-07-03 01:25:50'),
 (443, 1, 'Featured products ', '2020-06-30 00:11:06'),
 (443, 2, 'Featured products ', '2020-06-30 00:11:06'),
 (444, 1, '', '2020-06-30 00:11:06'),
@@ -23309,8 +23333,8 @@ INSERT INTO `ps_configuration_lang` (`id_configuration`, `id_lang`, `value`, `da
 (466, 2, '', '2020-06-30 00:11:07'),
 (467, 1, 'cms.jpg', '2020-06-30 00:11:07'),
 (467, 2, 'cms.jpg', '2020-06-30 00:11:07'),
-(468, 1, '#', '2020-06-30 00:11:07'),
-(468, 2, '#', '2020-06-30 00:11:07'),
+(468, 1, '', '2020-07-02 23:22:05'),
+(468, 2, '', '2020-07-02 23:22:05'),
 (512, 1, 'Hot Deals', '2020-06-30 00:11:07'),
 (512, 2, 'Hot Deals', '2020-06-30 00:11:07'),
 (513, 1, '', '2020-06-30 00:11:07'),
@@ -24922,7 +24946,7 @@ CREATE TABLE IF NOT EXISTS `ps_employee` (
 --
 
 INSERT INTO `ps_employee` (`id_employee`, `id_profile`, `id_lang`, `lastname`, `firstname`, `email`, `passwd`, `last_passwd_gen`, `stats_date_from`, `stats_date_to`, `stats_compare_from`, `stats_compare_to`, `stats_compare_option`, `preselect_date_range`, `bo_color`, `bo_theme`, `bo_css`, `default_tab`, `bo_width`, `bo_menu`, `active`, `optin`, `id_last_order`, `id_last_customer_message`, `id_last_customer`, `last_connection_date`, `reset_password_token`, `reset_password_validity`) VALUES
-(1, 1, 1, 'Owner Lastname', 'Owner', 'baqqamohamed@gmail.com', '$2y$10$NBhPxMxvcfaelQMewdlFgePebOSxj0k6.2fAVwsJXm7cAgqTDfzcq', '2020-06-29 16:39:38', '2020-05-29', '2020-06-29', '0000-00-00', '0000-00-00', 1, NULL, NULL, 'default', 'theme.css', 1, 0, 1, 1, 1, 0, 0, 0, '2020-06-30', NULL, '0000-00-00 00:00:00');
+(1, 1, 1, 'Owner Lastname', 'Owner', 'baqqamohamed@gmail.com', '$2y$10$NBhPxMxvcfaelQMewdlFgePebOSxj0k6.2fAVwsJXm7cAgqTDfzcq', '2020-06-29 16:39:38', '2020-05-29', '2020-06-29', '0000-00-00', '0000-00-00', 1, NULL, NULL, 'default', 'theme.css', 1, 0, 1, 1, 1, 0, 0, 0, '2020-07-03', NULL, '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -25408,7 +25432,7 @@ CREATE TABLE IF NOT EXISTS `ps_hook` (
   `position` tinyint(1) NOT NULL DEFAULT 1,
   PRIMARY KEY (`id_hook`),
   UNIQUE KEY `hook_name` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=479 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=482 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `ps_hook`
@@ -25893,7 +25917,10 @@ INSERT INTO `ps_hook` (`id_hook`, `name`, `title`, `description`, `position`) VA
 (475, 'brandSlider', 'brandSlider', '', 0),
 (476, 'ModuleRoutes', 'ModuleRoutes', '', 1),
 (477, 'displayxipblogleft', 'displayxipblogleft', '', 1),
-(478, 'displayxipblogright', 'displayxipblogright', '', 1);
+(478, 'displayxipblogright', 'displayxipblogright', '', 1),
+(479, 'actionObjectSpecificPriceCoreDeleteAfter', 'actionObjectSpecificPriceCoreDeleteAfter', '', 1),
+(480, 'actionObjectSpecificPriceCoreAddAfter', 'actionObjectSpecificPriceCoreAddAfter', '', 1),
+(481, 'actionObjectSpecificPriceCoreUpdateAfter', 'actionObjectSpecificPriceCoreUpdateAfter', '', 1);
 
 -- --------------------------------------------------------
 
@@ -26143,6 +26170,9 @@ INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (83, 1, 476, 1),
 (83, 1, 477, 1),
 (83, 1, 478, 1),
+(87, 1, 479, 1),
+(87, 1, 480, 1),
+(87, 1, 481, 1),
 (2, 1, 395, 2),
 (3, 1, 396, 2),
 (3, 1, 402, 2),
@@ -26174,6 +26204,7 @@ INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (73, 1, 459, 2),
 (76, 1, 13, 2),
 (78, 1, 465, 2),
+(85, 1, 63, 2),
 (4, 1, 396, 3),
 (4, 1, 402, 3),
 (5, 1, 403, 3),
@@ -26215,6 +26246,7 @@ INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (78, 1, 24, 5),
 (78, 1, 76, 5),
 (82, 1, 465, 5),
+(85, 1, 13, 5),
 (12, 1, 105, 6),
 (36, 1, 49, 6),
 (57, 1, 402, 6),
@@ -26223,14 +26255,25 @@ INSERT INTO `ps_hook_module` (`id_module`, `id_shop`, `id_hook`, `position`) VAL
 (80, 1, 17, 6),
 (80, 1, 18, 6),
 (80, 1, 24, 6),
+(86, 1, 13, 6),
 (37, 1, 49, 7),
 (58, 1, 402, 7),
 (67, 1, 14, 7),
 (78, 1, 413, 7),
+(85, 1, 17, 7),
+(85, 1, 18, 7),
+(85, 1, 24, 7),
+(87, 1, 13, 7),
 (38, 1, 49, 8),
 (68, 1, 14, 8),
+(86, 1, 17, 8),
+(86, 1, 18, 8),
+(86, 1, 24, 8),
 (39, 1, 49, 9),
 (69, 1, 14, 9),
+(87, 1, 17, 9),
+(87, 1, 18, 9),
+(87, 1, 24, 9),
 (40, 1, 49, 10),
 (70, 1, 14, 10),
 (42, 1, 49, 11),
@@ -27063,9 +27106,9 @@ CREATE TABLE IF NOT EXISTS `ps_link_block_lang` (
 
 INSERT INTO `ps_link_block_lang` (`id_link_block`, `id_lang`, `name`, `custom_content`) VALUES
 (1, 1, 'Produits', NULL),
-(1, 2, 'Products', NULL),
+(1, 2, 'المنتجات', NULL),
 (2, 1, 'Notre société', NULL),
-(2, 2, 'Our company', NULL);
+(2, 2, 'شركتنا', NULL);
 
 -- --------------------------------------------------------
 
@@ -27098,7 +27141,7 @@ CREATE TABLE IF NOT EXISTS `ps_log` (
   `date_add` datetime NOT NULL,
   `date_upd` datetime NOT NULL,
   PRIMARY KEY (`id_log`)
-) ENGINE=InnoDB AUTO_INCREMENT=379 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=407 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `ps_log`
@@ -27483,7 +27526,35 @@ INSERT INTO `ps_log` (`id_log`, `severity`, `error_code`, `message`, `object_typ
 (375, 1, 0, 'Module xipblog has no vendor folder', '', 0, 1, '2020-06-30 00:11:08', '2020-06-30 00:11:08'),
 (376, 1, 0, 'Protect vendor folder in module xipblogdisplayposts', '', 0, 1, '2020-06-30 00:11:08', '2020-06-30 00:11:08'),
 (377, 1, 0, 'Module xipblogdisplayposts has no vendor folder', '', 0, 1, '2020-06-30 00:11:08', '2020-06-30 00:11:08'),
-(378, 1, 0, 'Connexion au back-office depuis ::1', '', 0, 1, '2020-06-30 20:29:38', '2020-06-30 20:29:38');
+(378, 1, 0, 'Connexion au back-office depuis ::1', '', 0, 1, '2020-06-30 20:29:38', '2020-06-30 20:29:38'),
+(379, 1, 0, 'Core output folder: C:\\\\wamp64\\\\www\\\\prestashop/mails', '', 0, 1, '2020-07-02 23:37:53', '2020-07-02 23:37:53'),
+(380, 1, 0, 'Modules output folder: C:\\\\wamp64\\\\www\\\\prestashop/modules/', '', 0, 1, '2020-07-02 23:37:53', '2020-07-02 23:37:53'),
+(381, 1, 0, 'Core output folder: C:\\\\wamp64\\\\www\\\\prestashop/mails', '', 0, 1, '2020-07-02 23:37:58', '2020-07-02 23:37:58'),
+(382, 1, 0, 'Modules output folder: C:\\\\wamp64\\\\www\\\\prestashop/modules/', '', 0, 1, '2020-07-02 23:37:58', '2020-07-02 23:37:58'),
+(383, 1, 0, 'Core output folder: C:\\\\wamp64\\\\www\\\\prestashop/mails', '', 0, 1, '2020-07-02 23:38:01', '2020-07-02 23:38:01'),
+(384, 1, 0, 'Modules output folder: C:\\\\wamp64\\\\www\\\\prestashop/modules/', '', 0, 1, '2020-07-02 23:38:01', '2020-07-02 23:38:01'),
+(385, 1, 0, 'Core output folder: C:\\\\wamp64\\\\www\\\\prestashop/mails', '', 0, 1, '2020-07-02 23:38:03', '2020-07-02 23:38:03'),
+(386, 1, 0, 'Modules output folder: C:\\\\wamp64\\\\www\\\\prestashop/modules/', '', 0, 1, '2020-07-02 23:38:03', '2020-07-02 23:38:03'),
+(387, 1, 0, 'Core output folder: C:\\\\wamp64\\\\www\\\\prestashop/mails', '', 0, 1, '2020-07-02 23:38:05', '2020-07-02 23:38:05'),
+(388, 1, 0, 'Modules output folder: C:\\\\wamp64\\\\www\\\\prestashop/modules/', '', 0, 1, '2020-07-02 23:38:05', '2020-07-02 23:38:05'),
+(389, 1, 0, 'Core output folder: C:\\\\wamp64\\\\www\\\\prestashop/mails', '', 0, 1, '2020-07-02 23:38:07', '2020-07-02 23:38:07'),
+(390, 1, 0, 'Modules output folder: C:\\\\wamp64\\\\www\\\\prestashop/modules/', '', 0, 1, '2020-07-02 23:38:07', '2020-07-02 23:38:07'),
+(391, 1, 0, 'Protect vendor folder in module ps_bestsellers', '', 0, 1, '2020-07-03 00:06:48', '2020-07-03 00:06:48'),
+(392, 3, 0, 'Data from PrestaShop Addons is invalid, and cannot fallback on cache. ', '', 0, 1, '2020-07-03 00:28:44', '2020-07-03 00:28:44'),
+(393, 1, 0, 'Protect vendor folder in module ps_newproducts', '', 0, 1, '2020-07-03 00:44:06', '2020-07-03 00:44:06'),
+(394, 1, 0, 'modification Logo', 'Logo', 1, 1, '2020-07-03 02:03:53', '2020-07-03 02:03:53'),
+(395, 1, 0, 'modification Logo', 'Logo', 2, 1, '2020-07-03 02:04:18', '2020-07-03 02:04:18'),
+(396, 1, 0, 'modification Logo', 'Logo', 3, 1, '2020-07-03 02:04:30', '2020-07-03 02:04:30'),
+(397, 1, 0, 'modification Logo', 'Logo', 3, 1, '2020-07-03 02:05:05', '2020-07-03 02:05:05'),
+(398, 1, 0, 'modification Logo', 'Logo', 3, 1, '2020-07-03 02:05:14', '2020-07-03 02:05:14'),
+(399, 1, 0, 'modification Logo', 'Logo', 3, 1, '2020-07-03 02:05:52', '2020-07-03 02:05:52'),
+(400, 1, 0, 'modification Logo', 'Logo', 3, 1, '2020-07-03 02:06:18', '2020-07-03 02:06:18'),
+(401, 1, 0, 'modification Logo', 'Logo', 4, 1, '2020-07-03 02:06:32', '2020-07-03 02:06:32'),
+(402, 1, 0, 'modification Logo', 'Logo', 5, 1, '2020-07-03 02:06:53', '2020-07-03 02:06:53'),
+(403, 1, 0, 'modification Logo', 'Logo', 6, 1, '2020-07-03 02:07:05', '2020-07-03 02:07:05'),
+(404, 1, 0, 'modification Logo', 'Logo', 7, 1, '2020-07-03 02:07:18', '2020-07-03 02:07:18'),
+(405, 1, 0, 'modification Logo', 'Logo', 8, 1, '2020-07-03 02:07:28', '2020-07-03 02:07:28'),
+(406, 1, 0, 'modification Logo', 'Logo', 3, 1, '2020-07-03 02:07:39', '2020-07-03 02:07:39');
 
 -- --------------------------------------------------------
 
@@ -27819,7 +27890,7 @@ CREATE TABLE IF NOT EXISTS `ps_module` (
   PRIMARY KEY (`id_module`),
   UNIQUE KEY `name_UNIQUE` (`name`),
   KEY `name` (`name`)
-) ENGINE=InnoDB AUTO_INCREMENT=85 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=88 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `ps_module`
@@ -27908,7 +27979,10 @@ INSERT INTO `ps_module` (`id_module`, `name`, `active`, `version`) VALUES
 (81, 'poscountdown', 1, '1.6'),
 (82, 'poslogo', 1, '1.0'),
 (83, 'xipblog', 1, '2.0.0'),
-(84, 'xipblogdisplayposts', 1, '2.0.0');
+(84, 'xipblogdisplayposts', 1, '2.0.0'),
+(85, 'ps_bestsellers', 1, '1.0.3'),
+(86, 'ps_newproducts', 1, '1.0.1'),
+(87, 'ps_specials', 1, '1.0.1');
 
 -- --------------------------------------------------------
 
@@ -28259,7 +28333,19 @@ INSERT INTO `ps_module_access` (`id_profile`, `id_authorization_role`) VALUES
 (1, 921),
 (1, 922),
 (1, 923),
-(1, 924);
+(1, 924),
+(1, 925),
+(1, 926),
+(1, 927),
+(1, 928),
+(1, 929),
+(1, 930),
+(1, 931),
+(1, 932),
+(1, 933),
+(1, 934),
+(1, 935),
+(1, 936);
 
 -- --------------------------------------------------------
 
@@ -28597,7 +28683,16 @@ INSERT INTO `ps_module_group` (`id_module`, `id_shop`, `id_group`) VALUES
 (83, 1, 3),
 (84, 1, 1),
 (84, 1, 2),
-(84, 1, 3);
+(84, 1, 3),
+(85, 1, 1),
+(85, 1, 2),
+(85, 1, 3),
+(86, 1, 1),
+(86, 1, 2),
+(86, 1, 3),
+(87, 1, 1),
+(87, 1, 2),
+(87, 1, 3);
 
 -- --------------------------------------------------------
 
@@ -28613,7 +28708,24 @@ CREATE TABLE IF NOT EXISTS `ps_module_history` (
   `date_add` datetime NOT NULL,
   `date_upd` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `ps_module_history`
+--
+
+INSERT INTO `ps_module_history` (`id`, `id_employee`, `id_module`, `date_add`, `date_upd`) VALUES
+(1, 1, 64, '2020-07-03 00:09:34', '2020-07-03 22:24:06'),
+(2, 1, 77, '2020-07-03 00:19:58', '2020-07-03 23:34:16'),
+(3, 1, 76, '2020-07-03 00:22:55', '2020-07-03 01:34:42'),
+(4, 1, 78, '2020-07-03 01:02:07', '2020-07-03 23:35:00'),
+(5, 1, 79, '2020-07-03 01:02:59', '2020-07-03 01:02:59'),
+(6, 1, 70, '2020-07-03 01:23:26', '2020-07-03 01:23:26'),
+(7, 1, 69, '2020-07-03 01:26:10', '2020-07-03 01:26:10'),
+(8, 1, 73, '2020-07-03 01:28:33', '2020-07-03 22:10:02'),
+(9, 1, 68, '2020-07-03 01:34:16', '2020-07-03 19:58:48'),
+(10, 1, 9, '2020-07-03 01:43:04', '2020-07-03 01:43:04'),
+(11, 1, 82, '2020-07-03 02:01:33', '2020-07-03 02:01:33');
 
 -- --------------------------------------------------------
 
@@ -28660,12 +28772,14 @@ INSERT INTO `ps_module_shop` (`id_module`, `id_shop`, `enable_device`) VALUES
 (6, 1, 7),
 (7, 1, 7),
 (8, 1, 7),
+(9, 1, 7),
 (10, 1, 7),
 (11, 1, 7),
 (12, 1, 7),
 (13, 1, 7),
 (14, 1, 7),
 (15, 1, 7),
+(16, 1, 7),
 (17, 1, 7),
 (19, 1, 7),
 (21, 1, 7),
@@ -28724,7 +28838,6 @@ INSERT INTO `ps_module_shop` (`id_module`, `id_shop`, `enable_device`) VALUES
 (76, 1, 7),
 (77, 1, 7),
 (78, 1, 7),
-(79, 1, 7),
 (80, 1, 7),
 (81, 1, 7),
 (82, 1, 7),
@@ -29544,8 +29657,8 @@ INSERT INTO `ps_poslistcategories_items` (`id_poslistcategories_items`, `positio
 (1, 1, 1, 3, ''),
 (2, 2, 1, 4, ''),
 (3, 3, 1, 5, ''),
-(4, 4, 1, 6, ''),
-(5, 5, 1, 7, '');
+(4, 4, 0, 6, ''),
+(5, 5, 0, 7, '');
 
 -- --------------------------------------------------------
 
@@ -29567,15 +29680,15 @@ CREATE TABLE IF NOT EXISTS `ps_poslistcategories_items_lang` (
 --
 
 INSERT INTO `ps_poslistcategories_items_lang` (`id_poslistcategories_items`, `id_lang`, `description`, `image`) VALUES
-(1, 1, '', 'thumb-1.jpg'),
+(1, 1, '<p>Ipsum is not simply random text. </p>', 'thumb-1.jpg'),
 (1, 2, '', 'thumb-1.jpg'),
-(2, 1, '', 'thumb-2.jpg'),
+(2, 1, '<p>Ipsum is not simply random text. </p>', 'thumb-2.jpg'),
 (2, 2, '', 'thumb-2.jpg'),
-(3, 1, '', 'thumb-3.jpg'),
+(3, 1, '<p>Ipsum is not simply random text. </p>', 'thumb-3.jpg'),
 (3, 2, '', 'thumb-3.jpg'),
 (4, 1, '', 'thumb-4.jpg'),
 (4, 2, '', 'thumb-4.jpg'),
-(5, 1, '', 'thumb-5.jpg'),
+(5, 1, '<p><span style=\"font-family:\'Open Sans\', Arial, sans-serif;font-size:14px;text-align:justify;background-color:#ffffff;\">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock</span></p>', 'thumb-5.jpg'),
 (5, 2, '', 'thumb-5.jpg');
 
 -- --------------------------------------------------------
@@ -29620,8 +29733,8 @@ CREATE TABLE IF NOT EXISTS `ps_poslistcateproduct_items` (
 --
 
 INSERT INTO `ps_poslistcateproduct_items` (`id_poslistcateproduct_items`, `position`, `active`, `id_category`, `list_subcategories`) VALUES
-(1, 1, 1, 4, ''),
-(2, 2, 1, 5, '');
+(1, 1, 1, 2, '3,6,9'),
+(2, 2, 0, 5, '');
 
 -- --------------------------------------------------------
 
@@ -29644,7 +29757,7 @@ CREATE TABLE IF NOT EXISTS `ps_poslistcateproduct_items_lang` (
 --
 
 INSERT INTO `ps_poslistcateproduct_items_lang` (`id_poslistcateproduct_items`, `id_lang`, `description`, `url`, `image`) VALUES
-(1, 1, '', 'http://posthemes.com', 'thumb-1.jpg'),
+(1, 1, '', 'http://posthemes.com', 'aac14ddbb10db659dfc0ee2ec2adf09df4496642_OnPaste.20200703-005219.png'),
 (1, 2, '', 'http://posthemes.com', 'thumb-1.jpg'),
 (2, 1, '', 'http://posthemes.com', 'thumb-2.jpg'),
 (2, 2, '', 'http://posthemes.com', 'thumb-2.jpg');
@@ -29681,7 +29794,7 @@ CREATE TABLE IF NOT EXISTS `ps_posmegamenu_item` (
   `subtitle_lineheight` tinyint(1) UNSIGNED DEFAULT NULL,
   `subtitle_transform` tinyint(1) UNSIGNED DEFAULT NULL,
   PRIMARY KEY (`id_posmegamenu_item`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `ps_posmegamenu_item`
@@ -29689,7 +29802,10 @@ CREATE TABLE IF NOT EXISTS `ps_posmegamenu_item` (
 
 INSERT INTO `ps_posmegamenu_item` (`id_posmegamenu_item`, `type_link`, `link`, `type_icon`, `icon`, `icon_class`, `submenu_type`, `item_class`, `new_window`, `position`, `active`, `item_bg_color`, `item_bg_colorh`, `item_color`, `item_colorh`, `item_fontsize`, `item_lineheight`, `item_transform`, `subtitle_bg_color`, `subtitle_color`, `subtitle_fontsize`, `subtitle_lineheight`, `subtitle_transform`) VALUES
 (1, 0, 'PAGhomepage', 0, '', '', 2, '', 0, 0, 1, '', '', '', '', 0, 0, 0, '', '', 0, 0, 0),
-(2, 2, '', 0, '', '', 0, '', 0, 3, 1, '', '', '', '', 0, 0, 0, '', '', 0, 0, 0);
+(2, 2, '', 0, '', '', 0, '', 0, 3, 1, '', '', '', '', 0, 0, 0, '', '', 0, 0, 0),
+(3, 0, 'CMS1', 0, '', '', 0, '', 0, 4, 1, '', '', '', '', 0, 0, 0, '', '', 0, 0, 0),
+(4, 0, 'CAT3', 0, '', '', 0, '', 0, 5, 1, '', '', '', '', 0, 0, 0, '', '', 0, 0, 0),
+(5, 0, 'CAT6', 0, '', '', 0, '', 0, 6, 1, '', '', '', '', 0, 0, 0, '', '', 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -29705,7 +29821,7 @@ CREATE TABLE IF NOT EXISTS `ps_posmegamenu_item_lang` (
   `custom_link` varchar(255) DEFAULT NULL,
   `subtitle` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id_posmegamenu_item`,`id_lang`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `ps_posmegamenu_item_lang`
@@ -29715,7 +29831,13 @@ INSERT INTO `ps_posmegamenu_item_lang` (`id_posmegamenu_item`, `id_lang`, `title
 (1, 1, 'Home', '', ''),
 (1, 2, 'Home', '', ''),
 (2, 1, 'Custom Menu', '', ''),
-(2, 2, 'Custom Menu', '', '');
+(2, 2, 'Custom Menu', '', ''),
+(3, 1, 'Livraison', '#', ''),
+(3, 2, 'menu title', '#', ''),
+(4, 1, 'Vetements', '#', ''),
+(4, 2, 'menu title', '#', ''),
+(5, 1, 'Accessoires', '#', ''),
+(5, 2, 'menu title', '#', '');
 
 -- --------------------------------------------------------
 
@@ -29728,7 +29850,7 @@ CREATE TABLE IF NOT EXISTS `ps_posmegamenu_item_shop` (
   `id_posmegamenu_item` int(11) NOT NULL AUTO_INCREMENT,
   `id_shop` int(10) UNSIGNED NOT NULL,
   PRIMARY KEY (`id_posmegamenu_item`,`id_shop`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `ps_posmegamenu_item_shop`
@@ -29736,7 +29858,10 @@ CREATE TABLE IF NOT EXISTS `ps_posmegamenu_item_shop` (
 
 INSERT INTO `ps_posmegamenu_item_shop` (`id_posmegamenu_item`, `id_shop`) VALUES
 (1, 1),
-(2, 1);
+(2, 1),
+(3, 1),
+(4, 1),
+(5, 1);
 
 -- --------------------------------------------------------
 
@@ -29767,7 +29892,7 @@ CREATE TABLE IF NOT EXISTS `ps_posmegamenu_submenu` (
   `submenu_title_lineheight` tinyint(1) UNSIGNED DEFAULT NULL,
   `submenu_title_transform` tinyint(1) UNSIGNED DEFAULT NULL,
   PRIMARY KEY (`id_submenu`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `ps_posmegamenu_submenu`
@@ -29775,7 +29900,10 @@ CREATE TABLE IF NOT EXISTS `ps_posmegamenu_submenu` (
 
 INSERT INTO `ps_posmegamenu_submenu` (`id_submenu`, `id_posmegamenu_item`, `submenu_class`, `active`, `submenu_width`, `submenu_bg`, `submenu_bg_color`, `submenu_bg_image`, `submenu_bg_repeat`, `submenu_bg_position`, `submenu_link_color`, `submenu_link_colorh`, `submenu_link_fontsize`, `submenu_link_lineheight`, `submenu_link_transform`, `submenu_title_color`, `submenu_title_colorh`, `submenu_title_fontsize`, `submenu_title_lineheight`, `submenu_title_transform`) VALUES
 (1, 1, '', 1, 0, '', '', '', 0, 0, '', '', 0, 0, 0, '', '', 0, 0, 0),
-(2, 2, '', 1, 12, '1', '', '', 1, 1, '', '', 0, 0, 0, '', '', 0, 0, 0);
+(2, 2, '', 1, 12, '1', '', '', 1, 1, '', '', 0, 0, 0, '', '', 0, 0, 0),
+(3, 3, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(4, 4, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(5, 5, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -30096,7 +30224,7 @@ CREATE TABLE IF NOT EXISTS `ps_posvegamenu_item` (
   `subtitle_lineheight` tinyint(1) UNSIGNED DEFAULT NULL,
   `subtitle_transform` tinyint(1) UNSIGNED DEFAULT NULL,
   PRIMARY KEY (`id_posvegamenu_item`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `ps_posvegamenu_item`
@@ -30104,7 +30232,10 @@ CREATE TABLE IF NOT EXISTS `ps_posvegamenu_item` (
 
 INSERT INTO `ps_posvegamenu_item` (`id_posvegamenu_item`, `type_link`, `link`, `type_icon`, `icon`, `icon_class`, `submenu_type`, `item_class`, `new_window`, `position`, `active`, `item_bg_color`, `item_bg_colorh`, `item_color`, `item_colorh`, `item_fontsize`, `item_lineheight`, `item_transform`, `subtitle_bg_color`, `subtitle_color`, `subtitle_fontsize`, `subtitle_lineheight`, `subtitle_transform`) VALUES
 (1, 0, 'PAGhomepage', 0, '', '', 2, '', 0, 0, 1, '', '', '', '', 0, 0, 0, '', '', 0, 0, 0),
-(2, 2, '', 0, '', '', 0, '', 0, 3, 1, '', '', '', '', 0, 0, 0, '', '', 0, 0, 0);
+(2, 2, '', 0, '', '', 0, '', 0, 3, 1, '', '', '', '', 0, 0, 0, '', '', 0, 0, 0),
+(3, 0, 'CMS4', 0, '', '', 0, '', 0, 4, 1, '', '', '', '', 0, 0, 0, '', '', 0, 0, 0),
+(4, 0, 'CMS2', 0, '', '', 0, '', 0, 5, 1, '', '', '', '', 0, 0, 0, '', '', 0, 0, 0),
+(5, 0, 'CMS1', 0, '', '', 0, '', 0, 6, 1, '', '', '', '', 0, 0, 0, '', '', 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -30120,7 +30251,7 @@ CREATE TABLE IF NOT EXISTS `ps_posvegamenu_item_lang` (
   `custom_link` varchar(255) DEFAULT NULL,
   `subtitle` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id_posvegamenu_item`,`id_lang`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `ps_posvegamenu_item_lang`
@@ -30130,7 +30261,13 @@ INSERT INTO `ps_posvegamenu_item_lang` (`id_posvegamenu_item`, `id_lang`, `title
 (1, 1, 'Home', '', ''),
 (1, 2, 'Home', '', ''),
 (2, 1, 'Custom Menu', '', ''),
-(2, 2, 'Custom Menu', '', '');
+(2, 2, 'Custom Menu', '', ''),
+(3, 1, 'Apropos', '#', ''),
+(3, 2, 'menu title', '#', ''),
+(4, 1, 'Mentions légales', '#', ''),
+(4, 2, 'menu title', '#', ''),
+(5, 1, 'Livraison', '#', ''),
+(5, 2, 'menu title', '#', '');
 
 -- --------------------------------------------------------
 
@@ -30143,7 +30280,7 @@ CREATE TABLE IF NOT EXISTS `ps_posvegamenu_item_shop` (
   `id_posvegamenu_item` int(11) NOT NULL AUTO_INCREMENT,
   `id_shop` int(10) UNSIGNED NOT NULL,
   PRIMARY KEY (`id_posvegamenu_item`,`id_shop`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `ps_posvegamenu_item_shop`
@@ -30151,7 +30288,10 @@ CREATE TABLE IF NOT EXISTS `ps_posvegamenu_item_shop` (
 
 INSERT INTO `ps_posvegamenu_item_shop` (`id_posvegamenu_item`, `id_shop`) VALUES
 (1, 1),
-(2, 1);
+(2, 1),
+(3, 1),
+(4, 1),
+(5, 1);
 
 -- --------------------------------------------------------
 
@@ -30182,7 +30322,7 @@ CREATE TABLE IF NOT EXISTS `ps_posvegamenu_submenu` (
   `submenu_title_lineheight` tinyint(1) UNSIGNED DEFAULT NULL,
   `submenu_title_transform` tinyint(1) UNSIGNED DEFAULT NULL,
   PRIMARY KEY (`id_submenu`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `ps_posvegamenu_submenu`
@@ -30190,7 +30330,10 @@ CREATE TABLE IF NOT EXISTS `ps_posvegamenu_submenu` (
 
 INSERT INTO `ps_posvegamenu_submenu` (`id_submenu`, `id_posvegamenu_item`, `submenu_class`, `active`, `submenu_width`, `submenu_bg`, `submenu_bg_color`, `submenu_bg_image`, `submenu_bg_repeat`, `submenu_bg_position`, `submenu_link_color`, `submenu_link_colorh`, `submenu_link_fontsize`, `submenu_link_lineheight`, `submenu_link_transform`, `submenu_title_color`, `submenu_title_colorh`, `submenu_title_fontsize`, `submenu_title_lineheight`, `submenu_title_transform`) VALUES
 (1, 1, '', 1, 0, '', '', '', 0, 0, '', '', 0, 0, 0, '', '', 0, 0, 0),
-(2, 2, '', 1, 12, '1', '', '', 1, 1, '', '', 0, 0, 0, '', '', 0, 0, 0);
+(2, 2, '', 1, 12, '1', '', '', 1, 1, '', '', 0, 0, 0, '', '', 0, 0, 0),
+(3, 3, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(4, 4, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(5, 5, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -30397,7 +30540,7 @@ CREATE TABLE IF NOT EXISTS `ps_pos_staticblock` (
 --
 
 INSERT INTO `ps_pos_staticblock` (`id_pos_staticblock`, `id_hook`, `position`, `name`, `active`) VALUES
-(1, 459, 1, 'Static shipping', 1),
+(1, 459, 1, 'Mone compte', 1),
 (2, 102, 2, 'Static Cms', 1),
 (3, 13, 3, 'Home Banner', 1),
 (4, 465, 4, 'Home Banner2', 1);
@@ -30421,10 +30564,10 @@ CREATE TABLE IF NOT EXISTS `ps_pos_staticblock_lang` (
 --
 
 INSERT INTO `ps_pos_staticblock_lang` (`id_pos_staticblock`, `id_lang`, `content`) VALUES
-(1, 1, '<div id=\"_desktop_static\">\n				<div class=\"shipping\"><img src=\"/pos_madina/img/cms/shipping.png\" alt=\"\" />\n				<p><span>Free Shipping</span> on Orders $50+</p>\n				</div>\n				</div>'),
-(1, 2, '<div id=\"_desktop_static\">\n				<div class=\"shipping\"><img src=\"/pos_madina/img/cms/shipping.png\" alt=\"\" />\n				<p><span>Free Shipping</span> on Orders $50+</p>\n				</div>\n				</div>'),
-(2, 1, '<div class=\"container\">\n				<div class=\"static_cms\">\n				<div class=\"col-cms\">\n				<div class=\"box_cms\"><img src=\"/pos_madina/img/cms/cms1.png\" alt=\"\" class=\"img-responsive\" />\n				<div class=\"txt_cms\">\n				<h4>Free Shipping</h4>\n				<p>On all orders over $75.00</p>\n				</div>\n				</div>\n				</div>\n				<div class=\"col-cms\">\n				<div class=\"box_cms\"><img src=\"/pos_madina/img/cms/cms2.png\" alt=\"\" class=\"img-responsive\" />\n				<div class=\"txt_cms\">\n				<h4>Free Returns</h4>\n				<p>If goods have problems</p>\n				</div>\n				</div>\n				</div>\n				<div class=\"col-cms\">\n				<div class=\"box_cms\"><img src=\"/pos_madina/img/cms/cms3.png\" alt=\"\" class=\"img-responsive\" />\n				<div class=\"txt_cms\">\n				<h4>Secure Payment</h4>\n				<p>100% secure payment</p>\n				</div>\n				</div>\n				</div>\n				<div class=\"col-cms\">\n				<div class=\"box_cms\"><img src=\"/pos_madina/img/cms/cms4.png\" alt=\"\" class=\"img-responsive\" />\n				<div class=\"txt_cms\">\n				<h4>Support 24/7</h4>\n				<p>Contact us 24hrs a day</p>\n				</div>\n				</div>\n				</div>\n				<div class=\"col-cms\">\n				<div class=\"box_cms\"><img src=\"/pos_madina/img/cms/cms5.png\" alt=\"\" class=\"img-responsive\" />\n				<div class=\"txt_cms\">\n				<h4>Gift Service</h4>\n				<p>Support gift service</p>\n				</div>\n				</div>\n				</div>\n				</div>\n				</div>'),
-(2, 2, '<div class=\"container\">\n				<div class=\"static_cms\">\n				<div class=\"col-cms\">\n				<div class=\"box_cms\"><img src=\"/pos_madina/img/cms/cms1.png\" alt=\"\" class=\"img-responsive\" />\n				<div class=\"txt_cms\">\n				<h4>Free Shipping</h4>\n				<p>On all orders over $75.00</p>\n				</div>\n				</div>\n				</div>\n				<div class=\"col-cms\">\n				<div class=\"box_cms\"><img src=\"/pos_madina/img/cms/cms2.png\" alt=\"\" class=\"img-responsive\" />\n				<div class=\"txt_cms\">\n				<h4>Free Returns</h4>\n				<p>If goods have problems</p>\n				</div>\n				</div>\n				</div>\n				<div class=\"col-cms\">\n				<div class=\"box_cms\"><img src=\"/pos_madina/img/cms/cms3.png\" alt=\"\" class=\"img-responsive\" />\n				<div class=\"txt_cms\">\n				<h4>Secure Payment</h4>\n				<p>100% secure payment</p>\n				</div>\n				</div>\n				</div>\n				<div class=\"col-cms\">\n				<div class=\"box_cms\"><img src=\"/pos_madina/img/cms/cms4.png\" alt=\"\" class=\"img-responsive\" />\n				<div class=\"txt_cms\">\n				<h4>Support 24/7</h4>\n				<p>Contact us 24hrs a day</p>\n				</div>\n				</div>\n				</div>\n				<div class=\"col-cms\">\n				<div class=\"box_cms\"><img src=\"/pos_madina/img/cms/cms5.png\" alt=\"\" class=\"img-responsive\" />\n				<div class=\"txt_cms\">\n				<h4>Gift Service</h4>\n				<p>Support gift service</p>\n				</div>\n				</div>\n				</div>\n				</div>\n				</div>'),
+(1, 1, '<p><a href=\"/prestashop/fr/mon-compte\" class=\"costumer-accuount\"> <img src=\"/prestashop/img/cms/user.svg\" alt=\"\" /> Mon compte</a></p>'),
+(1, 2, '<div id=\"_desktop_static\">\r\n<div class=\"shipping\"><img src=\"/pos_madina/img/cms/shipping.png\" alt=\"\" />\r\n<p><span>Free Shipping</span> on Orders $50+</p>\r\n</div>\r\n</div>'),
+(2, 1, '<div class=\"row\">\r\n<div class=\"col-sm-12 col-md-4 col-lg-4 col-xl-4\">\r\n<div class=\"ui-shiping-box\"><img src=\"/prestashop/img/cms/truck.svg\" alt=\"\" />\r\n<div class=\"ui-shiping-box-details\">\r\n<h2>Free Shipping</h2>\r\n<p>On all orders over $75.00</p>\r\n</div>\r\n</div>\r\n</div>\r\n<div class=\"col-sm-12 col-md-4 col-lg-4 col-xl-4\">\r\n<div class=\"ui-shiping-box\"><img src=\"/prestashop/img/cms/truck.svg\" alt=\"\" />\r\n<div class=\"ui-shiping-box-details\">\r\n<h2>Free Shipping</h2>\r\n<p>On all orders over $75.00</p>\r\n</div>\r\n</div>\r\n</div>\r\n<div class=\"col-sm-12 col-md-4 col-lg-4 col-xl-4\">\r\n<div class=\"ui-shiping-box\"><img src=\"/prestashop/img/cms/truck.svg\" alt=\"\" />\r\n<div class=\"ui-shiping-box-details\">\r\n<h2>Free Shipping</h2>\r\n<p>On all orders over $75.00</p>\r\n</div>\r\n</div>\r\n</div>\r\n</div>'),
+(2, 2, '<div class=\"container\">\r\n<div class=\"static_cms\">\r\n<div class=\"col-cms\">\r\n<div class=\"box_cms\"><img src=\"/pos_madina/img/cms/cms1.png\" alt=\"\" class=\"img-responsive\" />\r\n<div class=\"txt_cms\">\r\n<h4>Free Shipping</h4>\r\n<p>On all orders over $75.00</p>\r\n</div>\r\n</div>\r\n</div>\r\n<div class=\"col-cms\">\r\n<div class=\"box_cms\"><img src=\"/pos_madina/img/cms/cms2.png\" alt=\"\" class=\"img-responsive\" />\r\n<div class=\"txt_cms\">\r\n<h4>Free Returns</h4>\r\n<p>If goods have problems</p>\r\n</div>\r\n</div>\r\n</div>\r\n<div class=\"col-cms\">\r\n<div class=\"box_cms\"><img src=\"/pos_madina/img/cms/cms3.png\" alt=\"\" class=\"img-responsive\" />\r\n<div class=\"txt_cms\">\r\n<h4>Secure Payment</h4>\r\n<p>100% secure payment</p>\r\n</div>\r\n</div>\r\n</div>\r\n<div class=\"col-cms\">\r\n<div class=\"box_cms\"><img src=\"/pos_madina/img/cms/cms4.png\" alt=\"\" class=\"img-responsive\" />\r\n<div class=\"txt_cms\">\r\n<h4>Support 24/7</h4>\r\n<p>Contact us 24hrs a day</p>\r\n</div>\r\n</div>\r\n</div>\r\n<div class=\"col-cms\">\r\n<div class=\"box_cms\"><img src=\"/pos_madina/img/cms/cms5.png\" alt=\"\" class=\"img-responsive\" />\r\n<div class=\"txt_cms\">\r\n<h4>Gift Service</h4>\r\n<p>Support gift service</p>\r\n</div>\r\n</div>\r\n</div>\r\n</div>\r\n</div>'),
 (3, 1, '<div class=\"home-banner\">\n				<div class=\"row\">\n				<div class=\"col col-lg-3 col-md-3 col-sm-12  col-xs-12\">\n				<div class=\"banner-box\"><a href=\"#\"><img src=\"/pos_madina/img/cms/1_1.jpg\" alt=\"\" /></a></div>\n				</div>\n				<div class=\"col col-lg-6 col-md-6 col-sm-12  col-xs-12\">\n				<div class=\"banner-box\"><a href=\"#\"><img src=\"/pos_madina/img/cms/2_1.jpg\" alt=\"\" /></a></div>\n				</div>\n				<div class=\"col col-lg-3 col-md-3 col-sm-12  col-xs-12\">\n				<div class=\"banner-box\"><a href=\"#\"><img src=\"/pos_madina/img/cms/3_1.jpg\" alt=\"\" /></a></div>\n				</div>\n				</div>\n				</div>'),
 (3, 2, '<div class=\"home-banner\">\n				<div class=\"row\">\n				<div class=\"col col-lg-3 col-md-3 col-sm-12  col-xs-12\">\n				<div class=\"banner-box\"><a href=\"#\"><img src=\"/pos_madina/img/cms/1_1.jpg\" alt=\"\" /></a></div>\n				</div>\n				<div class=\"col col-lg-6 col-md-6 col-sm-12  col-xs-12\">\n				<div class=\"banner-box\"><a href=\"#\"><img src=\"/pos_madina/img/cms/2_1.jpg\" alt=\"\" /></a></div>\n				</div>\n				<div class=\"col col-lg-3 col-md-3 col-sm-12  col-xs-12\">\n				<div class=\"banner-box\"><a href=\"#\"><img src=\"/pos_madina/img/cms/3_1.jpg\" alt=\"\" /></a></div>\n				</div>\n				</div>\n				</div>'),
 (4, 1, '<div class=\"home-banner\">\n				<div class=\"row\">\n				<div class=\"col col-lg-6 col-md-6 col-sm-12  col-xs-12\">\n				<div class=\"banner-box\"><a href=\"#\"><img src=\"/pos_madina/img/cms/4_1.jpg\" alt=\"\" /></a></div>\n				</div>\n				<div class=\"col col-lg-6 col-md-6 col-sm-12 col-xs-12\">\n				<div class=\"banner-box\"><a href=\"#\"><img src=\"/pos_madina/img/cms/5_1.jpg\" alt=\"\" /></a></div>\n				</div>\n				</div>\n				</div>'),
@@ -31124,6 +31267,18 @@ CREATE TABLE IF NOT EXISTS `ps_product_sale` (
   PRIMARY KEY (`id_product`),
   KEY `quantity` (`quantity`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `ps_product_sale`
+--
+
+INSERT INTO `ps_product_sale` (`id_product`, `quantity`, `sale_nbr`, `date_upd`) VALUES
+(1, 1, 1, '2020-07-02'),
+(2, 1, 1, '2020-07-02'),
+(4, 2, 1, '2020-07-02'),
+(8, 1, 1, '2020-07-02'),
+(10, 1, 1, '2020-07-02'),
+(16, 2, 2, '2020-07-02');
 
 -- --------------------------------------------------------
 

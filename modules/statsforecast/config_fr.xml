@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<module>
+    <name>statsforecast</name>
+    <displayName><![CDATA[Tableau de bord statistiques]]></displayName>
+    <version><![CDATA[2.0.3]]></version>
+    <description><![CDATA[Module principal du tableau de bord de statistiques. Affiche un r&eacute;sum&eacute; de toutes vos statistiques.]]></description>
+    <author><![CDATA[PrestaShop]]></author>
+    <tab><![CDATA[analytics_stats]]></tab>
+    <is_configurable>1</is_configurable>
+    <need_instance>0</need_instance>
+	<limited_countries></limited_countries>
+</module>
