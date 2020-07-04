@@ -6,6 +6,14 @@
     <language>fr</language>
      <atom:link href="https://www.prestashop.com/fr/blog/feed.xml" rel="self" type="application/rss+xml" />
       <item>
+    <title>Focus sur les modules SEO PrestaShop incontournables</title>
+    <link>https://www.prestashop.com/fr/blog/focus-modules-seo</link>
+    <description>Pour améliorer le SEO d’un site e-commerce PrestaShop, il vaut mieux privilégier les modules adaptés.</description>
+     <pubDate>Fri, 03 Jul 2020 14:33:07 +0200</pubDate>
+ <dc:creator>Halima Guaroual</dc:creator>
+ <guid isPermaLink="false">https://www.prestashop.com/fr/blog/focus-modules-seo</guid>
+  </item>
+  <item>
     <title> Comment mener une stratégie de fidélisation efficace ?</title>
     <link>https://www.prestashop.com/fr/blog/strategie-fidelisation-efficace</link>
     <description>De nombreuses marques dépensent des sommes astronomiques dans des stratégies d’acquisition client en oubliant d’inclure dans leur marketing un élément pourtant indispensable : la fidélisation clien</description>
@@ -76,14 +84,6 @@
      <pubDate>Wed, 17 Jun 2020 14:40:43 +0200</pubDate>
  <dc:creator>MLNielsen</dc:creator>
  <guid isPermaLink="false">https://www.prestashop.com/fr/blog/minute-marchand-1001hobbies</guid>
-  </item>
-  <item>
-    <title>Infographie : quel impact du coronavirus sur l&amp;#039;activité des e-commerçants ?</title>
-    <link>https://www.prestashop.com/fr/blog/infographie-ecommerce-coronavirus</link>
-    <description>PrestaShop a récemment invité les membres de son écosystème à participer à un sondage concernant l’impact du coronavirus sur leur activité e-commerce. 550 marchands ont répondu à c</description>
-     <pubDate>Tue, 16 Jun 2020 17:18:45 +0200</pubDate>
- <dc:creator>L&#039;équipe PrestaShop</dc:creator>
- <guid isPermaLink="false">https://www.prestashop.com/fr/blog/infographie-ecommerce-coronavirus</guid>
   </item>
   </channel>
 </rss>

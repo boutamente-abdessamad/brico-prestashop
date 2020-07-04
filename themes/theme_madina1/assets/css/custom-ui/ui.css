@@ -380,6 +380,137 @@ is not original style --------------*/
     .ui-shiping-box-details p {
         font-size: 14px;
     }
+    
+    #footer {
+        background: #325ca8;
+    }
+    
+    #footer .footer-container .footer_about_us .desc_info {
+        color: #FFFFFF;
+    }
+    
+    #footer .footer-container .footer_block h3 {
+        color: #FFFFFF;
+    }
+    
+    #footer .footer-container .footer_block .footer_list>li a,
+    #footer .footer-container .footer_block .footer_list>ul>li a {
+        color: #FFFFFF;
+    }
+    
+    .ft_newsletter .des_newsletter {
+        color: #FFFFFF;
+    }
+    
+    .social_follow h4 {
+        color: #FFFFFF;
+    }
+    
+    .ft_newsletter form .btn {
+        background: #FFFFFF;
+        color: #325ca8;
+    }
+    
+    #footer .footer-container .footer_bottom .copyright {
+        color: #FFFFFF;
+    }
+    
+    #footer .footer-container .footer_bottom .links_footer a {
+        color: #FFFFFF;
+    }
+    
+    a.cui-add-to-cart:hover {
+        color: #FFFFFF;
+    }
+    
+    .back-top a {
+        background-color: #325ca8;
+    }
+    
+    #footer img {
+        filter: brightness(16);
+    }
+    
+    a:hover,
+    #_mobile_wishtlist .wishtlist_top a:hover,
+    #_desktop_wishtlist .wishtlist_top a:hover,
+    #_mobile_compare .compare_top a:hover,
+    #_desktop_compare .compare_top a:hover,
+    #_desktop_contact_link .contact-link .data a:hover,
+    .selector-block .localiz_block:hover button,
+    .selector-block .localiz_block:hover .current-block,
+    .selector-block .localiz_block .dropdown-menu li:hover .dropdown-item,
+    .selector-block .localiz_block .dropdown-menu li.current .dropdown-item,
+    .selector-mobile button:hover,
+    .selector-mobile .dropdown-menu li a:hover,
+    .selector-mobile .dropdown-menu li.current a:hover,
+    .user-info-block:hover button,
+    .user-info-block .dropdown-menu li a:hover,
+    #_desktop_megamenu .pos-menu-horizontal .menu-content .menu-item.active>a,
+    #_desktop_megamenu .pos-menu-horizontal .menu-content .menu-item.home>a,
+    #_desktop_megamenu .pos-menu-horizontal .menu-content .menu-item:hover>a,
+    #_desktop_megamenu .pos-menu-horizontal .menu-content .menu-dropdown .submenu-item>a:hover,
+    #_desktop_megamenu .pos-menu-horizontal .menu-content .menu-dropdown .submenu-item .category-sub-menu a:hover,
+    #_desktop_megamenu .pos-menu-horizontal .menu-content .menu-item .menu-dropdown.cat-drop-menu li a:hover,
+    #_mobile_megamenu .pos-menu-horizontal .menu-item a:hover,
+    #_mobile_megamenu .pos-menu-horizontal .menu-item .icon-drop-mobile:hover i,
+    #_desktop_vegamenu .pos-menu-vertical .menu-content .menu-item.active>a,
+    #_desktop_vegamenu .pos-menu-vertical .menu-content .menu-item:hover>a,
+    #_desktop_vegamenu .pos-menu-vertical .menu-content .menu-dropdown .submenu-item>a:hover,
+    #_desktop_vegamenu .pos-menu-vertical .menu-content .menu-dropdown .submenu-item .category-sub-menu a:hover,
+    #_desktop_vegamenu .pos-menu-vertical .menu-content .menu-item .menu-dropdown.cat-drop-menu li a:hover,
+    #_mobile_vegamenu .pos-menu-vertical .menu-item a:hover,
+    #_mobile_vegamenu .pos-menu-vertical .menu-item .icon-drop-mobile:hover i,
+    #_desktop_search_category .search-icon:hover,
+    #pos_search_top .form_search .search_submit:hover,
+    .js-product-miniature.style_product_default .add-to-links li.cart button.ajax_add_to_cart_button:hover,
+    .js-product-miniature.style_product_default .add-to-links li.cart span.ajax_add_to_cart_button:hover,
+    .js-product-miniature.style_product_default .add-to-links li a:hover,
+    .js-product-miniature.style_product1 div.cart button.ajax_add_to_cart_button:hover,
+    .js-product-miniature.style_product1 div.cart span.ajax_add_to_cart_button:hover,
+    .blockcart:hover .button_cart a.desktop,
+    .blockcart .popup_cart .price_content .price_inline.cart-total .value,
+    .poslistcategories .list-categories .thumb-category .name_categories a:hover,
+    .poslistcategories .list-categories .desc-listcategoreis .sub a:hover,
+    .poslistcategories .list-categories .desc-listcategoreis .view-all a,
+    .poslistcateproduct .btn-group .dropdown-menu a:hover,
+    .comments_advices a:hover,
+    .block-categories .category-sub-menu li[data-depth="0"]>a:hover,
+    .block-categories .collapse-icons .add:hover,
+    .block-categories .collapse-icons .remove:hover,
+    .block-categories .category-sub-menu .category-sub-link:hover,
+    .breadcrumb_container .breadcrumb ol li:last-child a,
+    .breadcrumb_container .breadcrumb ol li:last-child span,
+    .breadcrumb_container .breadcrumb ol li a:hover,
+    .slideshow_container .pos-slideshow .nivo-directionNav a:hover,
+    .js-product-miniature .product_desc .product_name:hover,
+    .product-line-info a.product_name:hover,
+    .testimonials_container .item-testimonials .item .content_author .des_testimonial:before,
+    .home_blog_post_area .blog_slider .item .blog_post .post_title a:hover,
+    .home_blog_post_area .blog_slider .item .blog_post .read_more a:hover,
+    .meta_author span,
+    .home_blog_post_area .blog_slider .item .blog_post .meta_category a,
+    #footer a:hover,
+    #footer .footer-container .footer_block .footer_list>li a:hover,
+    #footer .footer-container .footer_bottom .copyright a,
+    #footer .footer-container .footer_bottom .links_footer a:hover,
+    #search_filters_wrapper #search_filters .facet .facet-label:hover a,
+    #js-product-list-top ul.display li:hover,
+    #js-product-list-top ul.display li.selected,
+    .js-product-miniature .product_desc .availability .availability-list span,
+    .product-line-grid-right .cart-line-product-actions .remove-from-cart:hover,
+    .product-line-grid-right .product-price .remove-from-cart:hover,
+    .social-sharing li a:hover,
+    .tabs .nav-tabs .nav-item .nav-link:hover,
+    .tabs .nav-tabs .nav-item .nav-link.active,
+    .ui-menu .ui-menu-item a.ui-state-focus,
+    .ui-menu .ui-menu-item a.ui-state-active,
+    .page-my-account #content .links a:hover i,
+    .panel-product-line #wishlist_button:hover,
+    .panel-product-line .compare-button:hover,
+    .panel-product-line .compare-button.cmp_added {
+        color: #d32e3f;
+    }
     /* .static_cms {
         display: none;
     } */
