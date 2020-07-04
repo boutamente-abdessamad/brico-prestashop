@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Jul 03, 2020 at 10:39 PM
+-- Generation Time: Jul 04, 2020 at 10:39 AM
 -- Server version: 10.4.10-MariaDB
 -- PHP Version: 7.3.12
 
@@ -24946,7 +24946,7 @@ CREATE TABLE IF NOT EXISTS `ps_employee` (
 --
 
 INSERT INTO `ps_employee` (`id_employee`, `id_profile`, `id_lang`, `lastname`, `firstname`, `email`, `passwd`, `last_passwd_gen`, `stats_date_from`, `stats_date_to`, `stats_compare_from`, `stats_compare_to`, `stats_compare_option`, `preselect_date_range`, `bo_color`, `bo_theme`, `bo_css`, `default_tab`, `bo_width`, `bo_menu`, `active`, `optin`, `id_last_order`, `id_last_customer_message`, `id_last_customer`, `last_connection_date`, `reset_password_token`, `reset_password_validity`) VALUES
-(1, 1, 1, 'Owner Lastname', 'Owner', 'baqqamohamed@gmail.com', '$2y$10$NBhPxMxvcfaelQMewdlFgePebOSxj0k6.2fAVwsJXm7cAgqTDfzcq', '2020-06-29 16:39:38', '2020-05-29', '2020-06-29', '0000-00-00', '0000-00-00', 1, NULL, NULL, 'default', 'theme.css', 1, 0, 1, 1, 1, 0, 0, 0, '2020-07-03', NULL, '0000-00-00 00:00:00');
+(1, 1, 1, 'Owner Lastname', 'Owner', 'baqqamohamed@gmail.com', '$2y$10$NBhPxMxvcfaelQMewdlFgePebOSxj0k6.2fAVwsJXm7cAgqTDfzcq', '2020-06-29 16:39:38', '2020-05-29', '2020-06-29', '0000-00-00', '0000-00-00', 1, NULL, NULL, 'default', 'theme.css', 1, 0, 1, 1, 1, 0, 0, 0, '2020-07-04', NULL, '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -28720,7 +28720,7 @@ INSERT INTO `ps_module_history` (`id`, `id_employee`, `id_module`, `date_add`, `
 (3, 1, 76, '2020-07-03 00:22:55', '2020-07-03 01:34:42'),
 (4, 1, 78, '2020-07-03 01:02:07', '2020-07-03 23:35:00'),
 (5, 1, 79, '2020-07-03 01:02:59', '2020-07-03 01:02:59'),
-(6, 1, 70, '2020-07-03 01:23:26', '2020-07-03 01:23:26'),
+(6, 1, 70, '2020-07-03 01:23:26', '2020-07-04 11:34:22'),
 (7, 1, 69, '2020-07-03 01:26:10', '2020-07-03 01:26:10'),
 (8, 1, 73, '2020-07-03 01:28:33', '2020-07-03 22:10:02'),
 (9, 1, 68, '2020-07-03 01:34:16', '2020-07-03 19:58:48'),
@@ -30224,7 +30224,7 @@ CREATE TABLE IF NOT EXISTS `ps_posvegamenu_item` (
   `subtitle_lineheight` tinyint(1) UNSIGNED DEFAULT NULL,
   `subtitle_transform` tinyint(1) UNSIGNED DEFAULT NULL,
   PRIMARY KEY (`id_posvegamenu_item`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `ps_posvegamenu_item`
@@ -30235,7 +30235,12 @@ INSERT INTO `ps_posvegamenu_item` (`id_posvegamenu_item`, `type_link`, `link`, `
 (2, 2, '', 0, '', '', 0, '', 0, 3, 1, '', '', '', '', 0, 0, 0, '', '', 0, 0, 0),
 (3, 0, 'CMS4', 0, '', '', 0, '', 0, 4, 1, '', '', '', '', 0, 0, 0, '', '', 0, 0, 0),
 (4, 0, 'CMS2', 0, '', '', 0, '', 0, 5, 1, '', '', '', '', 0, 0, 0, '', '', 0, 0, 0),
-(5, 0, 'CMS1', 0, '', '', 0, '', 0, 6, 1, '', '', '', '', 0, 0, 0, '', '', 0, 0, 0);
+(5, 0, 'CMS1', 0, '', '', 0, '', 0, 6, 1, '', '', '', '', 0, 0, 0, '', '', 0, 0, 0),
+(6, 0, 'CAT8', 0, '', '', 0, '', 0, 7, 1, '', '', '', '', 0, 0, 0, '', '', 0, 0, 0),
+(7, 0, 'PAGstores', 0, '', '', 0, '', 0, 8, 1, '', '', '', '', 0, 0, 0, '', '', 0, 0, 0),
+(8, 0, 'CMS5', 0, '', '', 0, '', 0, 9, 1, '', '', '', '', 0, 0, 0, '', '', 0, 0, 0),
+(9, 0, 'MAN1', 0, '', '', 0, '', 0, 10, 1, '', '', '', '', 0, 0, 0, '', '', 0, 0, 0),
+(10, 0, 'PAGorder', 0, '', '', 0, '', 0, 11, 1, '', '', '', '', 0, 0, 0, '', '', 0, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -30251,7 +30256,7 @@ CREATE TABLE IF NOT EXISTS `ps_posvegamenu_item_lang` (
   `custom_link` varchar(255) DEFAULT NULL,
   `subtitle` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id_posvegamenu_item`,`id_lang`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `ps_posvegamenu_item_lang`
@@ -30267,7 +30272,17 @@ INSERT INTO `ps_posvegamenu_item_lang` (`id_posvegamenu_item`, `id_lang`, `title
 (4, 1, 'Mentions légales', '#', ''),
 (4, 2, 'menu title', '#', ''),
 (5, 1, 'Livraison', '#', ''),
-(5, 2, 'menu title', '#', '');
+(5, 2, 'menu title', '#', ''),
+(6, 1, 'Accessoires ', '#', ''),
+(6, 2, 'menu title', '#', ''),
+(7, 1, 'Magasins', '#', ''),
+(7, 2, 'menu title', '#', ''),
+(8, 1, 'Paiement', '#', ''),
+(8, 2, 'menu title', '#', ''),
+(9, 1, 'Studio Design', '#', ''),
+(9, 2, 'menu title', '#', ''),
+(10, 1, 'Commande', '#', ''),
+(10, 2, 'menu title', '#', '');
 
 -- --------------------------------------------------------
 
@@ -30280,7 +30295,7 @@ CREATE TABLE IF NOT EXISTS `ps_posvegamenu_item_shop` (
   `id_posvegamenu_item` int(11) NOT NULL AUTO_INCREMENT,
   `id_shop` int(10) UNSIGNED NOT NULL,
   PRIMARY KEY (`id_posvegamenu_item`,`id_shop`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `ps_posvegamenu_item_shop`
@@ -30291,7 +30306,12 @@ INSERT INTO `ps_posvegamenu_item_shop` (`id_posvegamenu_item`, `id_shop`) VALUES
 (2, 1),
 (3, 1),
 (4, 1),
-(5, 1);
+(5, 1),
+(6, 1),
+(7, 1),
+(8, 1),
+(9, 1),
+(10, 1);
 
 -- --------------------------------------------------------
 
@@ -30322,7 +30342,7 @@ CREATE TABLE IF NOT EXISTS `ps_posvegamenu_submenu` (
   `submenu_title_lineheight` tinyint(1) UNSIGNED DEFAULT NULL,
   `submenu_title_transform` tinyint(1) UNSIGNED DEFAULT NULL,
   PRIMARY KEY (`id_submenu`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `ps_posvegamenu_submenu`
@@ -30333,7 +30353,12 @@ INSERT INTO `ps_posvegamenu_submenu` (`id_submenu`, `id_posvegamenu_item`, `subm
 (2, 2, '', 1, 12, '1', '', '', 1, 1, '', '', 0, 0, 0, '', '', 0, 0, 0),
 (3, 3, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
 (4, 4, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(5, 5, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+(5, 5, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(6, 6, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(7, 7, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(8, 8, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(9, 9, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
+(10, 10, NULL, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
